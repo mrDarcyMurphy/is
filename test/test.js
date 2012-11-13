@@ -22,4 +22,23 @@ describe('numbers', function(){
     assert.equal(true,  is.integer(666))
   })
 
+  it('#int', function(){
+    var fn = function(){}
+    assert.equal(false, is.int(fn))
+    assert.equal(false, is.int(new Date))
+    assert.equal(false, is.int(undefined))
+    assert.equal(false, is.int(NaN))
+    assert.equal(false, is.int(null))
+    assert.equal(false, is.int(true))
+    assert.equal(false, is.int(false))
+    assert.equal(false, is.int({}))
+    assert.equal(false, is.int([]))
+    assert.equal(false, is.int(""))
+    assert.equal(false, is.int("asdf"))
+    assert.equal(false, is.int(1.23))
+    assert.equal(true,  is.int(-1))
+    assert.equal(true,  is.int(0))
+    assert.equal(true,  is.int(666)) // :metal:
+  })
+
 })
