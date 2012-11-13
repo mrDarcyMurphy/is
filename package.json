@@ -1,0 +1,16 @@
+{
+  "name": "is",
+  "description": "simple validations",
+  "version": "0.0.1",
+  "keywords": ["is", "validation"],
+  "homepage": "http://github.com/mrDarcyMurphy/is",
+  "author": "Darcy Murphy <mrDarcyMurphy@gmail.com> (http://github.com/mrDarcyMurphy)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrDarcyMurphy/is.git"
+  },
+  "main": "./lib/is.js",
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
