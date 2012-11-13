@@ -9,5 +9,8 @@
     "type": "git",
     "url": "https://github.com/mrDarcyMurphy/is.git"
   },
-  "main": "./lib/is.js"
+  "main": "./lib/is.js",
+  "devDependencies": {
+    "mocha": "*"
+  }
 }
