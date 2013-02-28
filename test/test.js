@@ -163,7 +163,7 @@ describe('numbers', function(){
     assert.equal(false, is.string([]))
     assert.equal(true,  is.string(""))
     assert.equal(true,  is.string(" 	"))
-    assert.equal(true, is.string("asdf"))
+    assert.equal(true,  is.string("asdf"))
     assert.equal(false, is.string(1.23))
     assert.equal(false, is.string(-42))
     assert.equal(false, is.string(-1))
