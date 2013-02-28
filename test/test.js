@@ -192,4 +192,25 @@ describe('numbers', function(){
     assert.equal(false, is.emptyString(666)) // :metal:
   })
 
+  it('#void', function(){
+    var fn = function(){}
+    assert.equal(false, is.void(fn))
+    assert.equal(false, is.void(new Date))
+    assert.equal(true,  is.void(undefined))
+    assert.equal(false, is.void(NaN))
+    assert.equal(true,  is.void(null))
+    assert.equal(false, is.void(true))
+    assert.equal(false, is.void(false))
+    assert.equal(false, is.void({}))
+    assert.equal(false, is.void([]))
+    assert.equal(false, is.void(""))
+    assert.equal(false, is.void(" 	"))
+    assert.equal(false, is.void("asdf"))
+    assert.equal(false, is.void(1.23))
+    assert.equal(false, is.void(-42))
+    assert.equal(false, is.void(-1))
+    assert.equal(false, is.void(0))
+    assert.equal(false, is.void(666)) // :metal:
+  })
+
 })
