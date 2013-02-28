@@ -1,4 +1,3 @@
-is
-==
+# is-it
 
 Simple validation module.
