@@ -1,7 +1,7 @@
 {
   "name": "is",
   "description": "simple validations",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": ["is", "validation"],
   "homepage": "http://github.com/mrDarcyMurphy/is",
   "author": "Darcy Murphy <mrDarcyMurphy@gmail.com> (http://github.com/mrDarcyMurphy)",
