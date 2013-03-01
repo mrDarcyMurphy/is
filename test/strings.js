@@ -45,25 +45,4 @@ describe('strings', function(){
     assert.equal(false, is.emptyString(666)) // :metal:
   })
 
-  it('#void', function(){
-    var fn = function(){}
-    assert.equal(false, is.not(fn))
-    assert.equal(false, is.not(new Date))
-    assert.equal(true,  is.not(undefined))
-    assert.equal(false, is.not(NaN))
-    assert.equal(true,  is.not(null))
-    assert.equal(false, is.not(true))
-    assert.equal(false, is.not(false))
-    assert.equal(false, is.not({}))
-    assert.equal(false, is.not([]))
-    assert.equal(false, is.not(""))
-    assert.equal(false, is.not("  "))
-    assert.equal(false, is.not("asdf"))
-    assert.equal(false, is.not(1.23))
-    assert.equal(false, is.not(-42))
-    assert.equal(false, is.not(-1))
-    assert.equal(false, is.not(0))
-    assert.equal(false, is.not(666)) // :metal:
-  })
-
 })
