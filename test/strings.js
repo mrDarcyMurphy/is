@@ -3,7 +3,7 @@ var is = require('../lib/is')
 
 describe('strings', function(){
 
-  it('#string', function(){
+  it('string', function(){
     var fn = function(){}
     assert.equal(false, is.string(fn))
     assert.equal(false, is.string(new Date))
@@ -24,7 +24,7 @@ describe('strings', function(){
     assert.equal(false, is.string(666)) // :metal:
   })
 
-  it('#emptyString', function(){
+  it('emptyString', function(){
     var fn = function(){}
     assert.equal(false, is.emptyString(fn))
     assert.equal(false, is.emptyString(new Date))

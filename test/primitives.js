@@ -3,7 +3,7 @@ var is = require('../lib/is')
 
 describe('primitives', function(){
 
-  it('#string', function(){
+  it('string', function(){
     var fn = function(){}
     assert.equal(false, is.string(fn))
     assert.equal(false, is.string(new Date))
