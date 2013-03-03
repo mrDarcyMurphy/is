@@ -3,10 +3,10 @@ var is = require('../lib/is')
 
 describe('casting methods', function(){
 
-  it('#toInteger', function(){
+  it('toInteger', function(){
     var fn = function(){}
 
-    // these actually become NaN which is a bitch to test
+    // these actually become NaN which is a bitch to test, so: true == !NaN
     assert.equal(true,  !is.toInteger(fn))
     assert.equal(true,  !is.toInteger(new Date))
     assert.equal(true,  !is.toInteger(undefined))
@@ -33,7 +33,7 @@ describe('casting methods', function(){
     assert.equal(666, is.toInteger(666))
   })
 
-  it('#toPositiveInteger', function(){
+  it('toPositiveInteger', function(){
     var fn = function(){}
     assert.equal(false, is.aPositiveInteger(fn))
     assert.equal(false, is.aPositiveInteger(new Date))
@@ -59,7 +59,7 @@ describe('casting methods', function(){
     assert.equal(true,  is.aPositiveInteger(666))
   })
 
-  it('#toNegativeInteger', function(){
+  it('toNegativeInteger', function(){
     var fn = function(){}
     assert.equal(false, is.aNegativeInteger(fn))
     assert.equal(false, is.aNegativeInteger(new Date))
@@ -85,7 +85,7 @@ describe('casting methods', function(){
     assert.equal(false, is.aNegativeInteger(666))
   })
 
-  it('#toPosInt plus attr', function(){
+  it('toPosInt plus attr', function(){
     var fn = function(){}
     assert.equal(false, is.aPosInt(fn, 2))
     assert.equal(false, is.aPosInt(new Date, 2))
@@ -111,7 +111,7 @@ describe('casting methods', function(){
     assert.equal(true,  is.aPosInt(666, 2))
   })
 
-  it('#toNegInt plus attr', function(){
+  it('toNegInt plus attr', function(){
     var fn = function(){}
     assert.equal(false, is.aNegInt(fn, -2))
     assert.equal(false, is.aNegInt(new Date, -2))
