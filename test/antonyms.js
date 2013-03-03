@@ -8,54 +8,54 @@ describe('isnt', function(){
 
   // don't need to test quite everything...
   it('has no toNumber', function(){
-    assert.equal(isnt.toNumber, undefined)
+    assert.equal(is.not.toNumber, undefined)
   })
   it('has no toInteger', function(){
-    assert.equal(isnt.toInteger, undefined)
+    assert.equal(is.not.toInteger, undefined)
   })
   it('aZero', function(){
-    assert.equal(false, isnt.aZero(0))
-    assert.equal(false, isnt.aZero("0"))
-    assert.equal(true, isnt.aZero("nope"))
+    assert.equal(false, is.not.aZero(0))
+    assert.equal(false, is.not.aZero("0"))
+    assert.equal(true,  is.not.aZero("nope"))
   })
   it('aInt', function(){
-    assert.equal(false, isnt.aInt(1))
-    assert.equal(false, isnt.aInt("1"))
-    assert.equal(true, isnt.aInt("nope"))
+    assert.equal(false, is.not.aInt(1))
+    assert.equal(false, is.not.aInt("1"))
+    assert.equal(true,  is.not.aInt("nope"))
   })
   it('aPositiveInteger', function(){
-    assert.equal(false, isnt.aPositiveInteger(1))
-    assert.equal(false, isnt.aPositiveInteger("1"))
-    assert.equal(true, isnt.aPositiveInteger("nope"))
+    assert.equal(false, is.not.aPositiveInteger(1))
+    assert.equal(false, is.not.aPositiveInteger("1"))
+    assert.equal(true,  is.not.aPositiveInteger("nope"))
   })
   it('aNegativeInteger', function(){
-    assert.equal(false, isnt.aNegativeInteger(-1))
-    assert.equal(false, isnt.aNegativeInteger("-1"))
-    assert.equal(true, isnt.aNegativeInteger("nope"))
+    assert.equal(false, is.not.aNegativeInteger(-1))
+    assert.equal(false, is.not.aNegativeInteger("-1"))
+    assert.equal(true,  is.not.aNegativeInteger("nope"))
   })
   it('integer', function(){
-    assert.equal(false, isnt.integer(1))
-    assert.equal(true, isnt.integer("1"))
+    assert.equal(false, is.not.integer(1))
+    assert.equal(true,  is.not.integer("1"))
   })
   it('positiveInteger', function(){
-    assert.equal(false, isnt.positiveInteger(1))
-    assert.equal(true, isnt.positiveInteger(-1))
+    assert.equal(false, is.not.positiveInteger(1))
+    assert.equal(true,  is.not.positiveInteger(-1))
   })
   it('negativeInteger', function(){
-    assert.equal(false, isnt.negativeInteger(-1))
-    assert.equal(true, isnt.negativeInteger(1))
+    assert.equal(false, is.not.negativeInteger(-1))
+    assert.equal(true,  is.not.negativeInteger(1))
   })
   it('zero', function(){
-    assert.equal(false, isnt.zero(0))
-    assert.equal(true, isnt.zero("0"))
+    assert.equal(false, is.not.zero(0))
+    assert.equal(true,  is.not.zero("0"))
   })
   it('string', function(){
-    assert.equal(false, isnt.string("yes"))
-    assert.equal(true, isnt.string(1))
+    assert.equal(false, is.not.string("yes"))
+    assert.equal(true,  is.not.string(1))
   })
   it('emptyString', function(){
-    assert.equal(false, isnt.emptyString(""))
-    assert.equal(true, isnt.emptyString("nope"))
+    assert.equal(false, is.not.emptyString(""))
+    assert.equal(true,  is.not.emptyString("nope"))
   })
 
 
