@@ -1,56 +1,73 @@
 var assert = require('assert')
 var is = require('../lib/is')
 
+var fn = function(){}
+
 describe('casting methods', function(){
 
   it('toInteger', function(){
-    var fn = function(){}
+    assert.equal(null, is.toInteger(fn))
+    assert.equal(null, is.toInteger(new Date))
+    assert.equal(null, is.toInteger(undefined))
+    assert.equal(null, is.toInteger(NaN))
+    assert.equal(null, is.toInteger(null))
+    assert.equal(null, is.toInteger(true))
+    assert.equal(null, is.toInteger(false))
+    assert.equal(null, is.toInteger({}))
+    assert.equal(null, is.toInteger([]))
+    assert.equal(null, is.toInteger(""))
+    assert.equal(null, is.toInteger("   "))
+    assert.equal(null, is.toInteger("asdf"))
+    assert.equal(1,    is.toInteger("1.23"))
+    assert.equal(-42,  is.toInteger("-42"))
+    assert.equal(-1,   is.toInteger("-1"))
+    assert.equal(0,    is.toInteger("0"))
+    assert.equal(666,  is.toInteger("666"))
+    assert.equal(1,    is.toInteger(1.23))
+    assert.equal(-42,  is.toInteger(-42))
+    assert.equal(-1,   is.toInteger(-1))
+    assert.equal(0,    is.toInteger(0))
+    assert.equal(666,  is.toInteger(666))
+  })
 
-    // these actually become NaN which is a bitch to test, so: true == !NaN
-    assert.equal(true,  !is.toInteger(fn))
-    assert.equal(true,  !is.toInteger(new Date))
-    assert.equal(true,  !is.toInteger(undefined))
-    assert.equal(true,  !is.toInteger(NaN))
-    assert.equal(true,  !is.toInteger(null))
-    assert.equal(true,  !is.toInteger(true))
-    assert.equal(true,  !is.toInteger(false))
-    assert.equal(true,  !is.toInteger({}))
-    assert.equal(true,  !is.toInteger([]))
-    assert.equal(true,  !is.toInteger(""))
-    assert.equal(true,  !is.toInteger("   "))
-    assert.equal(true,  !is.toInteger("asdf"))
-
-    // actual numbers
-    assert.equal(1,   is.toInteger("1.23"))
-    assert.equal(-42, is.toInteger("-42"))
-    assert.equal(-1,  is.toInteger("-1"))
-    assert.equal(0,   is.toInteger("0"))
-    assert.equal(666, is.toInteger("666"))
-    assert.equal(1,   is.toInteger(1.23))
-    assert.equal(-42, is.toInteger(-42))
-    assert.equal(-1,  is.toInteger(-1))
-    assert.equal(0,   is.toInteger(0))
-    assert.equal(666, is.toInteger(666))
+  it('toInt', function(){
+    assert.equal(null, is.toInt(fn))
+    assert.equal(null, is.toInt(new Date))
+    assert.equal(null, is.toInt(undefined))
+    assert.equal(null, is.toInt(NaN))
+    assert.equal(null, is.toInt(null))
+    assert.equal(null, is.toInt(true))
+    assert.equal(null, is.toInt(false))
+    assert.equal(null, is.toInt({}))
+    assert.equal(null, is.toInt([]))
+    assert.equal(null, is.toInt(""))
+    assert.equal(null, is.toInt("   "))
+    assert.equal(null, is.toInt("asdf"))
+    assert.equal(1,    is.toInt("1.23"))
+    assert.equal(-42,  is.toInt("-42"))
+    assert.equal(-1,   is.toInt("-1"))
+    assert.equal(0,    is.toInt("0"))
+    assert.equal(666,  is.toInt("666"))
+    assert.equal(1,    is.toInt(1.23))
+    assert.equal(-42,  is.toInt(-42))
+    assert.equal(-1,   is.toInt(-1))
+    assert.equal(0,    is.toInt(0))
+    assert.equal(666,  is.toInt(666))
   })
 
   it('toNumber', function(){
-    var fn = function(){}
-
-    // these actually become NaN which is a bitch to test, so: true == !NaN
-    assert.equal(true,  !is.toNumber(fn))
-    assert.equal(true,  !is.toNumber(new Date))
-    assert.equal(true,  !is.toNumber(undefined))
-    assert.equal(true,  !is.toNumber(NaN))
-    assert.equal(true,  !is.toNumber(null))
-    assert.equal(true,  !is.toNumber(true))
-    assert.equal(true,  !is.toNumber(false))
-    assert.equal(true,  !is.toNumber({}))
-    assert.equal(true,  !is.toNumber([]))
-    assert.equal(true,  !is.toNumber(""))
-    assert.equal(true,  !is.toNumber("   "))
-    assert.equal(true,  !is.toNumber("asdf"))
-
-    // actual numbers
+    assert.equal(null, is.toNumber(fn))
+    assert.equal(null, is.toNumber(new Date))
+    assert.equal(null, is.toNumber(undefined))
+    assert.equal(null, is.toNumber(NaN))
+    assert.equal(null, is.toNumber(null))
+    assert.equal(null, is.toNumber(true))
+    assert.equal(null, is.toNumber(false))
+    assert.equal(null, is.toNumber({}))
+    assert.equal(null, is.toNumber([]))
+    assert.equal(null, is.toNumber(""))
+    assert.equal(null, is.toNumber("   "))
+    assert.equal(null, is.toNumber("asdf"))
     assert.equal(1.23, is.toNumber("1.23"))
     assert.equal(-42,  is.toNumber("-42"))
     assert.equal(-1,   is.toNumber("-1"))
@@ -63,8 +80,32 @@ describe('casting methods', function(){
     assert.equal(666,  is.toNumber(666))
   })
 
+  it('toNum', function(){
+    assert.equal(null, is.toNum(fn))
+    assert.equal(null, is.toNum(new Date))
+    assert.equal(null, is.toNum(undefined))
+    assert.equal(null, is.toNum(NaN))
+    assert.equal(null, is.toNum(null))
+    assert.equal(null, is.toNum(true))
+    assert.equal(null, is.toNum(false))
+    assert.equal(null, is.toNum({}))
+    assert.equal(null, is.toNum([]))
+    assert.equal(null, is.toNum(""))
+    assert.equal(null, is.toNum("   "))
+    assert.equal(null, is.toNum("asdf"))
+    assert.equal(1.23, is.toNum("1.23"))
+    assert.equal(-42,  is.toNum("-42"))
+    assert.equal(-1,   is.toNum("-1"))
+    assert.equal(0,    is.toNum("0"))
+    assert.equal(666,  is.toNum("666"))
+    assert.equal(1.23, is.toNum(1.23))
+    assert.equal(-42,  is.toNum(-42))
+    assert.equal(-1,   is.toNum(-1))
+    assert.equal(0,    is.toNum(0))
+    assert.equal(666,  is.toNum(666))
+  })
+
   it('toPositiveInteger', function(){
-    var fn = function(){}
     assert.equal(false, is.aPositiveInteger(fn))
     assert.equal(false, is.aPositiveInteger(new Date))
     assert.equal(false, is.aPositiveInteger(undefined))
@@ -90,7 +131,6 @@ describe('casting methods', function(){
   })
 
   it('toNegativeInteger', function(){
-    var fn = function(){}
     assert.equal(false, is.aNegativeInteger(fn))
     assert.equal(false, is.aNegativeInteger(new Date))
     assert.equal(false, is.aNegativeInteger(undefined))
@@ -116,7 +156,6 @@ describe('casting methods', function(){
   })
 
   it('toPosInt plus attr', function(){
-    var fn = function(){}
     assert.equal(false, is.aPosInt(fn, 2))
     assert.equal(false, is.aPosInt(new Date, 2))
     assert.equal(false, is.aPosInt(undefined, 2))
@@ -142,7 +181,6 @@ describe('casting methods', function(){
   })
 
   it('toNegInt plus attr', function(){
-    var fn = function(){}
     assert.equal(false, is.aNegInt(fn, -2))
     assert.equal(false, is.aNegInt(new Date, -2))
     assert.equal(false, is.aNegInt(undefined, -2))
