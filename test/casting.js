@@ -33,6 +33,36 @@ describe('casting methods', function(){
     assert.equal(666, is.toInteger(666))
   })
 
+  it('toNumber', function(){
+    var fn = function(){}
+
+    // these actually become NaN which is a bitch to test, so: true == !NaN
+    assert.equal(true,  !is.toNumber(fn))
+    assert.equal(true,  !is.toNumber(new Date))
+    assert.equal(true,  !is.toNumber(undefined))
+    assert.equal(true,  !is.toNumber(NaN))
+    assert.equal(true,  !is.toNumber(null))
+    assert.equal(true,  !is.toNumber(true))
+    assert.equal(true,  !is.toNumber(false))
+    assert.equal(true,  !is.toNumber({}))
+    assert.equal(true,  !is.toNumber([]))
+    assert.equal(true,  !is.toNumber(""))
+    assert.equal(true,  !is.toNumber("   "))
+    assert.equal(true,  !is.toNumber("asdf"))
+
+    // actual numbers
+    assert.equal(1.23, is.toNumber("1.23"))
+    assert.equal(-42,  is.toNumber("-42"))
+    assert.equal(-1,   is.toNumber("-1"))
+    assert.equal(0,    is.toNumber("0"))
+    assert.equal(666,  is.toNumber("666"))
+    assert.equal(1.23, is.toNumber(1.23))
+    assert.equal(-42,  is.toNumber(-42))
+    assert.equal(-1,   is.toNumber(-1))
+    assert.equal(0,    is.toNumber(0))
+    assert.equal(666,  is.toNumber(666))
+  })
+
   it('toPositiveInteger', function(){
     var fn = function(){}
     assert.equal(false, is.aPositiveInteger(fn))
