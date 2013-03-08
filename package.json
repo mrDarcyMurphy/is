@@ -11,6 +11,8 @@
   },
   "main": "./lib/is.js",
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "grunt" : "0.4.x",
+    "grunt-contrib-uglify" : "0.1.x"
   }
 }
