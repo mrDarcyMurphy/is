@@ -1,16 +1,26 @@
 {
+  "asi": true,
+  "boss": true,
+  "browser": true,
   "curly": false,
+  "devel": false,
+  "eqnull": true,
   "eqeqeq": false,
-  "immed": true,
+  "immed": false,
   "latedef": true,
-  "newcap": true,
+  "loopfunc": true,
   "noarg": true,
   "sub": true,
   "undef": true,
-  "boss": true,
-  "eqnull": true,
-  "browser": true,
-  "asi": true,
-  "devel": true,
-  "predef" : [ "module", "__dirname" ]
+  "unused": true,
+
+  "predef" : [
+    "__dirname",
+    "define",
+    "describe",
+    "it",
+    "module",
+    "require",
+    "toString"
+  ]
 }
