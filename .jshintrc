@@ -6,6 +6,7 @@
   "devel": false,
   "eqnull": true,
   "eqeqeq": false,
+  "expr": true,
   "immed": false,
   "latedef": true,
   "loopfunc": true,
