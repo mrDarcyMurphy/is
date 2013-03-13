@@ -17,6 +17,7 @@
     "mocha": "*",
     "grunt": "0.4.x",
     "grunt-contrib-uglify": "0.1.x",
-    "grunt-contrib-jshint": "~0.2.0"
+    "grunt-contrib-jshint": "~0.2.0",
+    "grunt-simple-mocha": "~0.3.2"
   }
 }

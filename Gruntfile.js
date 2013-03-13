@@ -8,6 +8,9 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc'
       }
     },
+    simplemocha: {
+      all: { src: 'test/**/*.js' }
+    },
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */'
@@ -21,9 +24,10 @@ module.exports = function(grunt) {
   })
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'uglify'])
+  grunt.registerTask('default', ['jshint', 'simplemocha', 'uglify'])
 
   // load the grunt task plugins
   grunt.loadNpmTasks('grunt-contrib-jshint')
+  grunt.loadNpmTasks('grunt-simple-mocha')
   grunt.loadNpmTasks('grunt-contrib-uglify')
 };
