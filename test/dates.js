@@ -2,6 +2,10 @@ var assert = require('assert')
 var is = require('../lib/is')
 var fn = function(){}
 
+var future = new Date('04/16/9999')
+var today = new Date()
+var past = new Date('04/16/1982')
+
 describe('dates', function(){
 
   it('date', function(){
@@ -31,34 +35,33 @@ describe('dates', function(){
   })
 
   it('today', function(){
-    var notToday = new Date('04/16/1982')
-    assert.equal(false, is.today(notToday))
-
-    var today = new Date()
+    assert.equal(false, is.today(past))
     assert.equal(true , is.today(today))
+    assert.equal(false, is.today(future))
   })
 
   it('futureDate', function(){
-    var futureDate = new Date('04/16/9999')
-    assert.equal(true, is.futureDate(futureDate))
-
-    var today = new Date()
-    assert.equal(false, is.futureDate(today))
-
-    var past = new Date('04/16/1982')
     assert.equal(false, is.futureDate(past))
+    assert.equal(false, is.futureDate(today))
+    assert.equal(true , is.futureDate(future))
+  })
+
+  it('futureDate + attr', function(){
+    assert.equal(false, is.futureDate(past))
+    assert.equal(false, is.futureDate(today))
+    assert.equal(true , is.futureDate(future))
   })
 
   it('pastDate', function(){
-    var futureDate = new Date('04/16/9999')
-    assert.equal(false, is.pastDate(futureDate))
-
-    var today = new Date()
+    assert.equal(true , is.pastDate(past))
     assert.equal(false, is.pastDate(today))
-
-    var past = new Date('04/16/1982')
-    assert.equal(true, is.pastDate(past))
+    assert.equal(false, is.pastDate(future))
   })
 
+  it('pastDate + attr', function(){
+    assert.equal(true , is.pastDate(past))
+    assert.equal(false, is.pastDate(today))
+    assert.equal(false, is.pastDate(future))
+  })
 
 })
