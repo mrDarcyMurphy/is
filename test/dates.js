@@ -40,6 +40,12 @@ describe('dates', function(){
     assert.equal(false, is.today(future))
   })
 
+  it('now', function(){
+    assert.equal(false, is.now(past))
+    assert.equal(true , is.now(today))
+    assert.equal(false, is.now(future))
+  })
+
   it('today + attr', function(){
     assert.equal(true , is.today(past, past))
     assert.equal(false, is.today(past, today))
@@ -58,6 +64,12 @@ describe('dates', function(){
     assert.equal(true , is.futureDate(future))
   })
 
+  it('future', function(){
+    assert.equal(false, is.future(past))
+    assert.equal(false, is.future(today))
+    assert.equal(true , is.future(future))
+  })
+
   it('futureDate + attr', function(){
     assert.equal(false, is.futureDate(past, past))
     assert.equal(false, is.futureDate(past, today))
@@ -74,6 +86,12 @@ describe('dates', function(){
     assert.equal(true , is.pastDate(past))
     assert.equal(false, is.pastDate(today))
     assert.equal(false, is.pastDate(future))
+  })
+
+  it('past', function(){
+    assert.equal(true , is.past(past))
+    assert.equal(false, is.past(today))
+    assert.equal(false, is.past(future))
   })
 
   it('pastDate + attr', function(){
