@@ -58,6 +58,12 @@ describe('dates', function(){
     assert.equal(true , is.futureDate(future))
   })
 
+  it('future', function(){
+    assert.equal(false, is.future(past))
+    assert.equal(false, is.future(today))
+    assert.equal(true , is.future(future))
+  })
+
   it('futureDate + attr', function(){
     assert.equal(false, is.futureDate(past, past))
     assert.equal(false, is.futureDate(past, today))
@@ -76,6 +82,12 @@ describe('dates', function(){
     assert.equal(false, is.pastDate(future))
   })
 
+  it('past', function(){
+    assert.equal(true , is.past(past))
+    assert.equal(false, is.past(today))
+    assert.equal(false, is.past(future))
+  })
+
   it('pastDate + attr', function(){
     assert.equal(false, is.pastDate(past, past))
     assert.equal(true , is.pastDate(past, today))
@@ -92,12 +104,18 @@ describe('dates', function(){
     assert.equal(false, is.today("garbage"))
     assert.equal(false, is.pastDate("garbage"))
     assert.equal(false, is.futureDate("garbage"))
-    assert.equal(false, is.today("garbage", "crap"))
-    assert.equal(false, is.pastDate("garbage", "crap"))
-    assert.equal(false, is.futureDate("garbage", "crap"))
-    assert.equal(false, is.today(today, "crap"))
-    assert.equal(false, is.pastDate(past, "crap"))
-    assert.equal(false, is.futureDate(future, "crap"))
+    assert.equal(false, is.today("garbage", "garbage"))
+    assert.equal(false, is.pastDate("garbage", "garbage"))
+    assert.equal(false, is.futureDate("garbage", "garbage"))
+    assert.equal(true , is.pastDate(past, "garbage"))
+    assert.equal(false, is.pastDate(today, "garbage"))
+    assert.equal(false, is.pastDate(future, "garbage"))
+    assert.equal(false, is.today(past, "garbage"))
+    assert.equal(true , is.today(today, "garbage"))
+    assert.equal(false, is.today(future, "garbage"))
+    assert.equal(false, is.futureDate(past, "garbage"))
+    assert.equal(false, is.futureDate(today, "garbage"))
+    assert.equal(true , is.futureDate(future, "garbage"))
   })
 
 
