@@ -6,7 +6,7 @@ describe('strings', function(){
   it('string', function(){
     var fn = function(){}
     assert.equal(false, is.string(fn))
-    assert.equal(false, is.string(new Date))
+    assert.equal(false, is.string(new Date()))
     assert.equal(false, is.string(undefined))
     assert.equal(false, is.string(NaN))
     assert.equal(false, is.string(null))
@@ -27,7 +27,7 @@ describe('strings', function(){
   it('emptyString', function(){
     var fn = function(){}
     assert.equal(false, is.emptyString(fn))
-    assert.equal(false, is.emptyString(new Date))
+    assert.equal(false, is.emptyString(new Date()))
     assert.equal(false, is.emptyString(undefined))
     assert.equal(false, is.emptyString(NaN))
     assert.equal(false, is.emptyString(null))

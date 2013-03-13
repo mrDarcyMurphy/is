@@ -7,7 +7,7 @@ describe('casting methods', function(){
 
   it('toInteger', function(){
     assert.equal(null, is.toInteger(fn))
-    assert.equal(null, is.toInteger(new Date))
+    assert.equal(null, is.toInteger(new Date()))
     assert.equal(null, is.toInteger(undefined))
     assert.equal(null, is.toInteger(NaN))
     assert.equal(null, is.toInteger(null))
@@ -32,7 +32,7 @@ describe('casting methods', function(){
 
   it('toInt', function(){
     assert.equal(null, is.toInt(fn))
-    assert.equal(null, is.toInt(new Date))
+    assert.equal(null, is.toInt(new Date()))
     assert.equal(null, is.toInt(undefined))
     assert.equal(null, is.toInt(NaN))
     assert.equal(null, is.toInt(null))
@@ -57,7 +57,7 @@ describe('casting methods', function(){
 
   it('toNumber', function(){
     assert.equal(null, is.toNumber(fn))
-    assert.equal(null, is.toNumber(new Date))
+    assert.equal(null, is.toNumber(new Date()))
     assert.equal(null, is.toNumber(undefined))
     assert.equal(null, is.toNumber(NaN))
     assert.equal(null, is.toNumber(null))
@@ -82,7 +82,7 @@ describe('casting methods', function(){
 
   it('toNum', function(){
     assert.equal(null, is.toNum(fn))
-    assert.equal(null, is.toNum(new Date))
+    assert.equal(null, is.toNum(new Date()))
     assert.equal(null, is.toNum(undefined))
     assert.equal(null, is.toNum(NaN))
     assert.equal(null, is.toNum(null))
@@ -107,7 +107,7 @@ describe('casting methods', function(){
 
   it('toPositiveInteger', function(){
     assert.equal(false, is.aPositiveInteger(fn))
-    assert.equal(false, is.aPositiveInteger(new Date))
+    assert.equal(false, is.aPositiveInteger(new Date()))
     assert.equal(false, is.aPositiveInteger(undefined))
     assert.equal(false, is.aPositiveInteger(NaN))
     assert.equal(false, is.aPositiveInteger(null))
@@ -132,7 +132,7 @@ describe('casting methods', function(){
 
   it('toNegativeInteger', function(){
     assert.equal(false, is.aNegativeInteger(fn))
-    assert.equal(false, is.aNegativeInteger(new Date))
+    assert.equal(false, is.aNegativeInteger(new Date()))
     assert.equal(false, is.aNegativeInteger(undefined))
     assert.equal(false, is.aNegativeInteger(NaN))
     assert.equal(false, is.aNegativeInteger(null))
@@ -157,7 +157,7 @@ describe('casting methods', function(){
 
   it('toPosInt plus attr', function(){
     assert.equal(false, is.aPosInt(fn, 2))
-    assert.equal(false, is.aPosInt(new Date, 2))
+    assert.equal(false, is.aPosInt(new Date(), 2))
     assert.equal(false, is.aPosInt(undefined, 2))
     assert.equal(false, is.aPosInt(NaN, 2))
     assert.equal(false, is.aPosInt(null, 2))
@@ -182,7 +182,7 @@ describe('casting methods', function(){
 
   it('toNegInt plus attr', function(){
     assert.equal(false, is.aNegInt(fn, -2))
-    assert.equal(false, is.aNegInt(new Date, -2))
+    assert.equal(false, is.aNegInt(new Date(), -2))
     assert.equal(false, is.aNegInt(undefined, -2))
     assert.equal(false, is.aNegInt(NaN, -2))
     assert.equal(false, is.aNegInt(null, -2))
