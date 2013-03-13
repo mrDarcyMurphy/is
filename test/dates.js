@@ -47,9 +47,13 @@ describe('dates', function(){
   })
 
   it('futureDate + attr', function(){
-    assert.equal(false, is.futureDate(past))
-    assert.equal(false, is.futureDate(today))
-    assert.equal(true , is.futureDate(future))
+    assert.equal(false, is.futureDate(past, today))
+    assert.equal(true , is.futureDate(today, past))
+    assert.equal(true , is.futureDate(future, past))
+    assert.equal(false, is.futureDate(past, future))
+    assert.equal(true , is.futureDate(future, today))
+    assert.equal(false, is.futureDate(today, future))
+    assert.equal(false, is.futureDate(today, today))
   })
 
   it('pastDate', function(){
@@ -59,9 +63,24 @@ describe('dates', function(){
   })
 
   it('pastDate + attr', function(){
-    assert.equal(true , is.pastDate(past))
-    assert.equal(false, is.pastDate(today))
-    assert.equal(false, is.pastDate(future))
+    assert.equal(true , is.pastDate(past, today))
+    assert.equal(false, is.pastDate(today, past))
+    assert.equal(false, is.pastDate(future, past))
+    assert.equal(true , is.pastDate(past, future))
+    assert.equal(false, is.pastDate(future, today))
+    assert.equal(true , is.pastDate(today, future))
+    assert.equal(false, is.pastDate(today, today))
   })
+
+  it("doesn't choke on bad data", function(){
+    assert.equal(false, is.today("garbage"))
+    assert.equal(false, is.pastDate("garbage"))
+    assert.equal(false, is.futureDate("garbage"))
+    assert.equal(false, is.pastDate("garbage", "crap"))
+    assert.equal(false, is.futureDate("garbage", "crap"))
+    assert.equal(false, is.pastDate(past, "crap"))
+    assert.equal(false, is.futureDate(future, "crap"))
+  })
+
 
 })
