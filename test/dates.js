@@ -39,9 +39,25 @@ describe('dates', function(){
   })
 
   it('futureDate', function(){
+    var futureDate = new Date('04/16/9999')
+    assert.equal(true, is.futureDate(futureDate))
+
+    var today = new Date()
+    assert.equal(false, is.futureDate(today))
+
+    var past = new Date('04/16/1982')
+    assert.equal(false, is.futureDate(past))
   })
 
   it('pastDate', function(){
+    var futureDate = new Date('04/16/9999')
+    assert.equal(false, is.pastDate(futureDate))
+
+    var today = new Date()
+    assert.equal(false, is.pastDate(today))
+
+    var past = new Date('04/16/1982')
+    assert.equal(true, is.pastDate(past))
   })
 
 
