@@ -6,7 +6,7 @@ describe('numbers', function(){
   it('integer', function(){
     var fn = function(){}
     assert.equal(false, is.integer(fn))
-    assert.equal(false, is.integer(new Date))
+    assert.equal(false, is.integer(new Date()))
     assert.equal(false, is.integer(undefined))
     assert.equal(false, is.integer(NaN))
     assert.equal(false, is.integer(null))
@@ -33,7 +33,7 @@ describe('numbers', function(){
   it('int', function(){
     var fn = function(){}
     assert.equal(false, is.int(fn))
-    assert.equal(false, is.int(new Date))
+    assert.equal(false, is.int(new Date()))
     assert.equal(false, is.int(undefined))
     assert.equal(false, is.int(NaN))
     assert.equal(false, is.int(null))
@@ -60,7 +60,7 @@ describe('numbers', function(){
   it('aInt', function(){
     var fn = function(){}
     assert.equal(false, is.aInt(fn))
-    assert.equal(false, is.aInt(new Date))
+    assert.equal(false, is.aInt(new Date()))
     assert.equal(false, is.aInt(undefined))
     assert.equal(false, is.aInt(NaN))
     assert.equal(false, is.aInt(null))
@@ -87,7 +87,7 @@ describe('numbers', function(){
   it('positiveInteger', function(){
     var fn = function(){}
     assert.equal(false, is.positiveInteger(fn))
-    assert.equal(false, is.positiveInteger(new Date))
+    assert.equal(false, is.positiveInteger(new Date()))
     assert.equal(false, is.positiveInteger(undefined))
     assert.equal(false, is.positiveInteger(NaN))
     assert.equal(false, is.positiveInteger(null))
@@ -114,7 +114,7 @@ describe('numbers', function(){
   it('aPositiveInteger', function(){
     var fn = function(){}
     assert.equal(false, is.aPositiveInteger(fn))
-    assert.equal(false, is.aPositiveInteger(new Date))
+    assert.equal(false, is.aPositiveInteger(new Date()))
     assert.equal(false, is.aPositiveInteger(undefined))
     assert.equal(false, is.aPositiveInteger(NaN))
     assert.equal(false, is.aPositiveInteger(null))
@@ -141,7 +141,7 @@ describe('numbers', function(){
   it('posInt', function(){
     var fn = function(){}
     assert.equal(false, is.posInt(fn))
-    assert.equal(false, is.posInt(new Date))
+    assert.equal(false, is.posInt(new Date()))
     assert.equal(false, is.posInt(undefined))
     assert.equal(false, is.posInt(NaN))
     assert.equal(false, is.posInt(null))
@@ -168,7 +168,7 @@ describe('numbers', function(){
   it('posInt + arg', function(){
     var fn = function(){}
     assert.equal(false, is.posInt(fn, 2))
-    assert.equal(false, is.posInt(new Date, 2))
+    assert.equal(false, is.posInt(new Date(), 2))
     assert.equal(false, is.posInt(undefined, 2))
     assert.equal(false, is.posInt(NaN, 2))
     assert.equal(false, is.posInt(null, 2))
@@ -193,7 +193,7 @@ describe('numbers', function(){
     assert.equal(true,  is.posInt(666, 2))
 
     assert.equal(false, is.posInt(fn, -2))
-    assert.equal(false, is.posInt(new Date, -2))
+    assert.equal(false, is.posInt(new Date(), -2))
     assert.equal(false, is.posInt(undefined, -2))
     assert.equal(false, is.posInt(NaN, -2))
     assert.equal(false, is.posInt(null, -2))
@@ -221,7 +221,7 @@ describe('numbers', function(){
   it('negativeInteger', function(){
     var fn = function(){}
     assert.equal(false, is.negativeInteger(fn))
-    assert.equal(false, is.negativeInteger(new Date))
+    assert.equal(false, is.negativeInteger(new Date()))
     assert.equal(false, is.negativeInteger(undefined))
     assert.equal(false, is.negativeInteger(NaN))
     assert.equal(false, is.negativeInteger(null))
@@ -248,7 +248,7 @@ describe('numbers', function(){
   it('aNegativeInteger', function(){
     var fn = function(){}
     assert.equal(false, is.aNegativeInteger(fn))
-    assert.equal(false, is.aNegativeInteger(new Date))
+    assert.equal(false, is.aNegativeInteger(new Date()))
     assert.equal(false, is.aNegativeInteger(undefined))
     assert.equal(false, is.aNegativeInteger(NaN))
     assert.equal(false, is.aNegativeInteger(null))
@@ -275,7 +275,7 @@ describe('numbers', function(){
   it('negInt', function(){
     var fn = function(){}
     assert.equal(false, is.negInt(fn))
-    assert.equal(false, is.negInt(new Date))
+    assert.equal(false, is.negInt(new Date()))
     assert.equal(false, is.negInt(undefined))
     assert.equal(false, is.negInt(NaN))
     assert.equal(false, is.negInt(null))
@@ -302,7 +302,7 @@ describe('numbers', function(){
   it('posInt + arg', function(){
     var fn = function(){}
     assert.equal(false, is.negInt(fn, 2))
-    assert.equal(false, is.negInt(new Date, 2))
+    assert.equal(false, is.negInt(new Date(), 2))
     assert.equal(false, is.negInt(undefined, 2))
     assert.equal(false, is.negInt(NaN, 2))
     assert.equal(false, is.negInt(null, 2))
@@ -327,7 +327,7 @@ describe('numbers', function(){
     assert.equal(false, is.negInt(666, 2))
 
     assert.equal(false, is.negInt(fn, -2))
-    assert.equal(false, is.negInt(new Date, -2))
+    assert.equal(false, is.negInt(new Date(), -2))
     assert.equal(false, is.negInt(undefined, -2))
     assert.equal(false, is.negInt(NaN, -2))
     assert.equal(false, is.negInt(null, -2))
@@ -355,7 +355,7 @@ describe('numbers', function(){
   it('zero', function(){
     var fn = function(){}
     assert.equal(false, is.zero(fn))
-    assert.equal(false, is.zero(new Date))
+    assert.equal(false, is.zero(new Date()))
     assert.equal(false, is.zero(undefined))
     assert.equal(false, is.zero(NaN))
     assert.equal(false, is.zero(null))
@@ -382,7 +382,7 @@ describe('numbers', function(){
   it('aZero', function(){
     var fn = function(){}
     assert.equal(false, is.aZero(fn))
-    assert.equal(false, is.aZero(new Date))
+    assert.equal(false, is.aZero(new Date()))
     assert.equal(false, is.aZero(undefined))
     assert.equal(false, is.aZero(NaN))
     assert.equal(false, is.aZero(null))
