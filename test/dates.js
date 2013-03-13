@@ -40,12 +40,6 @@ describe('dates', function(){
     assert.equal(false, is.today(future))
   })
 
-  it('now', function(){
-    assert.equal(false, is.now(past))
-    assert.equal(true , is.now(today))
-    assert.equal(false, is.now(future))
-  })
-
   it('today + attr', function(){
     assert.equal(true , is.today(past, past))
     assert.equal(false, is.today(past, today))
