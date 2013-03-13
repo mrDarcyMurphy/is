@@ -31,6 +31,11 @@ describe('dates', function(){
   })
 
   it('today', function(){
+    var notToday = new Date('04/16/1982')
+    assert.equal(false, is.today(notToday))
+
+    var today = new Date()
+    assert.equal(true , is.today(today))
   })
 
   it('futureDate', function(){
