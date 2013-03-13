@@ -40,6 +40,18 @@ describe('dates', function(){
     assert.equal(false, is.today(future))
   })
 
+  it('today + attr', function(){
+    assert.equal(true , is.today(past, past))
+    assert.equal(false, is.today(past, today))
+    assert.equal(false, is.today(past, future))
+    assert.equal(false, is.today(today, past))
+    assert.equal(true , is.today(today, today))
+    assert.equal(false, is.today(today, future))
+    assert.equal(false, is.today(future, past))
+    assert.equal(false, is.today(future, today))
+    assert.equal(true , is.today(future, future))
+  })
+
   it('futureDate', function(){
     assert.equal(false, is.futureDate(past))
     assert.equal(false, is.futureDate(today))
@@ -47,13 +59,15 @@ describe('dates', function(){
   })
 
   it('futureDate + attr', function(){
+    assert.equal(false, is.futureDate(past, past))
     assert.equal(false, is.futureDate(past, today))
-    assert.equal(true , is.futureDate(today, past))
-    assert.equal(true , is.futureDate(future, past))
     assert.equal(false, is.futureDate(past, future))
-    assert.equal(true , is.futureDate(future, today))
-    assert.equal(false, is.futureDate(today, future))
+    assert.equal(true , is.futureDate(today, past))
     assert.equal(false, is.futureDate(today, today))
+    assert.equal(false, is.futureDate(today, future))
+    assert.equal(true , is.futureDate(future, past))
+    assert.equal(true , is.futureDate(future, today))
+    assert.equal(false, is.futureDate(future, future))
   })
 
   it('pastDate', function(){
@@ -63,13 +77,15 @@ describe('dates', function(){
   })
 
   it('pastDate + attr', function(){
+    assert.equal(false, is.pastDate(past, past))
     assert.equal(true , is.pastDate(past, today))
-    assert.equal(false, is.pastDate(today, past))
-    assert.equal(false, is.pastDate(future, past))
     assert.equal(true , is.pastDate(past, future))
-    assert.equal(false, is.pastDate(future, today))
-    assert.equal(true , is.pastDate(today, future))
+    assert.equal(false, is.pastDate(today, past))
     assert.equal(false, is.pastDate(today, today))
+    assert.equal(true , is.pastDate(today, future))
+    assert.equal(false, is.pastDate(future, past))
+    assert.equal(false, is.pastDate(future, today))
+    assert.equal(false, is.pastDate(future, future))
   })
 
   it("doesn't choke on bad data", function(){
