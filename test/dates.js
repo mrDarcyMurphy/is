@@ -2,7 +2,6 @@ var assert = require('assert')
 var is = require('../lib/is')
 var fn = function(){}
 
-
 describe('dates', function(){
 
   it('date', function(){
