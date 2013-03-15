@@ -123,7 +123,7 @@ describe('primitives', function(){
     assert.equal(true , is.present(fn))
     assert.equal(true , is.present(new Date()))
     assert.equal(false, is.present(undefined))
-    assert.equal(true , is.present(NaN)) // do we want this to pass or not?
+    assert.equal(true , is.present(NaN))
     assert.equal(false, is.present(null))
     assert.equal(true , is.present(true))
     assert.equal(true , is.present(false))
@@ -140,6 +140,10 @@ describe('primitives', function(){
     assert.equal(true , is.present(-1))
     assert.equal(true , is.present(0))
     assert.equal(true , is.present(666)) // :metal:
+
+    assert.equal(false, is.present(is.toNum("asdf")))
+    assert.equal(true , is.present(is.int("asdf"))) // NaN is technically "present"
+    assert.equal(false, (is.present("asdf") && is.int("asdf"))) // this is probably how you'd do it, two checks, not one
   })
 
 
