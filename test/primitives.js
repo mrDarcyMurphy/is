@@ -50,7 +50,7 @@ describe('primitives', function(){
     assert.equal(false, is.boolean(666)) // :metal:
   })
 
-  it('function', function(){
+  it('func', function(){
     assert.equal(true , is.func(fn))
     assert.equal(false, is.func(new Date()))
     assert.equal(false, is.func(undefined))
@@ -73,7 +73,7 @@ describe('primitives', function(){
     assert.equal(false, is.func(666)) // :metal:
   })
 
-  it('null', function(){
+  it('nil', function(){
     assert.equal(false, is.nil(fn))
     assert.equal(false, is.nil(new Date()))
     assert.equal(false, is.nil(undefined))
@@ -96,7 +96,7 @@ describe('primitives', function(){
     assert.equal(false, is.nil(666)) // :metal:
   })
 
-  it('undefined', function(){
+  it('undef', function(){
     assert.equal(false, is.undef(fn))
     assert.equal(false, is.undef(new Date()))
     assert.equal(true , is.undef(undefined))
@@ -117,6 +117,29 @@ describe('primitives', function(){
     assert.equal(false, is.undef(-1))
     assert.equal(false, is.undef(0))
     assert.equal(false, is.undef(666)) // :metal:
+  })
+
+  it('present', function(){
+    assert.equal(true , is.present(fn))
+    assert.equal(true , is.present(new Date()))
+    assert.equal(false, is.present(undefined))
+    assert.equal(true , is.present(NaN)) // do we want this to pass or not?
+    assert.equal(false, is.present(null))
+    assert.equal(true , is.present(true))
+    assert.equal(true , is.present(false))
+    assert.equal(true , is.present(new Object()))
+    assert.equal(true , is.present({}))
+    assert.equal(true , is.present({foo:'bar'}))
+    assert.equal(true , is.present(new Array()))
+    assert.equal(true , is.present([]))
+    assert.equal(false, is.present(""))
+    assert.equal(false, is.present("   ")) // according to is, this is an empty string
+    assert.equal(true , is.present("asdf"))
+    assert.equal(true , is.present(1.23))
+    assert.equal(true , is.present(-42))
+    assert.equal(true , is.present(-1))
+    assert.equal(true , is.present(0))
+    assert.equal(true , is.present(666)) // :metal:
   })
 
 
