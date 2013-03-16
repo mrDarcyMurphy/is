@@ -2,7 +2,7 @@ var assert = require('assert')
 var is = require('../lib/is')
 var fn = function(){}
 
-describe('integers', function(){
+describe('negative integers', function(){
 
   it('negativeInteger', function(){
     assert.equal(false, is.negativeInteger(fn))
