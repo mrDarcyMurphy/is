@@ -3,7 +3,7 @@ var is = require('../lib/is')
 
 var fn = function(){}
 
-describe('casting methods', function(){
+describe('helpers', function(){
 
   it('toInteger', function(){
     assert.equal(null, is.toInteger(fn))
