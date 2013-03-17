@@ -74,7 +74,7 @@ For now, check the source and tests for a full run down of how things work.
 
 ### Antonyms
 
-`is.not[methodName]` will reverse the result of all the methods.
+`is.not[methodName]` will return the inverse all methods.
 
 ```javascript
 is.not.greaterThan(1, 2) // true : 1 is not greater than 2
