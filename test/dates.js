@@ -120,28 +120,28 @@ describe('dates', function(){
     assert.equal(true , is.not.today(666))
   })
 
-  it('today + attr', function(){
-    assert.equal(true , is.today(past, past))
-    assert.equal(false, is.today(past, today))
-    assert.equal(false, is.today(past, future))
-    assert.equal(false, is.today(today, past))
-    assert.equal(true , is.today(today, today))
-    assert.equal(false, is.today(today, future))
-    assert.equal(false, is.today(future, past))
-    assert.equal(false, is.today(future, today))
-    assert.equal(true , is.today(future, future))
+  it('sameDate', function(){
+    assert.equal(true , is.sameDate(past, past))
+    assert.equal(false, is.sameDate(past, today))
+    assert.equal(false, is.sameDate(past, future))
+    assert.equal(false, is.sameDate(today, past))
+    assert.equal(true , is.sameDate(today, today))
+    assert.equal(false, is.sameDate(today, future))
+    assert.equal(false, is.sameDate(future, past))
+    assert.equal(false, is.sameDate(future, today))
+    assert.equal(true , is.sameDate(future, future))
   })
 
-  it('not.today + attr', function(){
-    assert.equal(false, is.not.today(past, past))
-    assert.equal(true , is.not.today(past, today))
-    assert.equal(true , is.not.today(past, future))
-    assert.equal(true , is.not.today(today, past))
-    assert.equal(false, is.not.today(today, today))
-    assert.equal(true , is.not.today(today, future))
-    assert.equal(true , is.not.today(future, past))
-    assert.equal(true , is.not.today(future, today))
-    assert.equal(false, is.not.today(future, future))
+  it('not.sameDate', function(){
+    assert.equal(false, is.not.sameDate(past, past))
+    assert.equal(true , is.not.sameDate(past, today))
+    assert.equal(true , is.not.sameDate(past, future))
+    assert.equal(true , is.not.sameDate(today, past))
+    assert.equal(false, is.not.sameDate(today, today))
+    assert.equal(true , is.not.sameDate(today, future))
+    assert.equal(true , is.not.sameDate(future, past))
+    assert.equal(true , is.not.sameDate(future, today))
+    assert.equal(false, is.not.sameDate(future, future))
   })
 
   it('futureDate', function(){
