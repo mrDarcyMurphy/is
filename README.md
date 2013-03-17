@@ -4,6 +4,9 @@ A simple validation module striving for code minimalism, a clear declarative syn
 
 Pairs with [prove](https://github.com/mikefrey/prove) for validation sugar.
 
+[![browser support](http://ci.testling.com/mrDarcyMurphy/is.png)](http://ci.testling.com/mrDarcyMurphy/is)
+
+
 ## Installation
 
 ```
