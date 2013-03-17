@@ -1,10 +1,10 @@
 var assert = require('assert')
 var is = require('../lib/is')
+var fn = function(){}
 
 describe('strings', function(){
 
   it('string', function(){
-    var fn = function(){}
     assert.equal(false, is.string(fn))
     assert.equal(false, is.string(new Date()))
     assert.equal(false, is.string(undefined))
@@ -24,8 +24,67 @@ describe('strings', function(){
     assert.equal(false, is.string(666)) // :metal:
   })
 
+  it('not.string', function(){
+    assert.equal(true , is.not.string(fn))
+    assert.equal(true , is.not.string(new Date()))
+    assert.equal(true , is.not.string(undefined))
+    assert.equal(true , is.not.string(NaN))
+    assert.equal(true , is.not.string(null))
+    assert.equal(true , is.not.string(true))
+    assert.equal(true , is.not.string(false))
+    assert.equal(true , is.not.string({}))
+    assert.equal(true , is.not.string([]))
+    assert.equal(false, is.not.string(""))
+    assert.equal(false, is.not.string("   "))
+    assert.equal(false, is.not.string("asdf"))
+    assert.equal(true , is.not.string(1.23))
+    assert.equal(true , is.not.string(-42))
+    assert.equal(true , is.not.string(-1))
+    assert.equal(true , is.not.string(0))
+    assert.equal(true , is.not.string(666)) // :metal:
+  })
+
+  it('str', function(){
+    assert.equal(false, is.str(fn))
+    assert.equal(false, is.str(new Date()))
+    assert.equal(false, is.str(undefined))
+    assert.equal(false, is.str(NaN))
+    assert.equal(false, is.str(null))
+    assert.equal(false, is.str(true))
+    assert.equal(false, is.str(false))
+    assert.equal(false, is.str({}))
+    assert.equal(false, is.str([]))
+    assert.equal(true,  is.str(""))
+    assert.equal(true,  is.str("   "))
+    assert.equal(true,  is.str("asdf"))
+    assert.equal(false, is.str(1.23))
+    assert.equal(false, is.str(-42))
+    assert.equal(false, is.str(-1))
+    assert.equal(false, is.str(0))
+    assert.equal(false, is.str(666)) // :metal:
+  })
+
+  it('not.str', function(){
+    assert.equal(true , is.not.str(fn))
+    assert.equal(true , is.not.str(new Date()))
+    assert.equal(true , is.not.str(undefined))
+    assert.equal(true , is.not.str(NaN))
+    assert.equal(true , is.not.str(null))
+    assert.equal(true , is.not.str(true))
+    assert.equal(true , is.not.str(false))
+    assert.equal(true , is.not.str({}))
+    assert.equal(true , is.not.str([]))
+    assert.equal(false, is.not.str(""))
+    assert.equal(false, is.not.str("   "))
+    assert.equal(false, is.not.str("asdf"))
+    assert.equal(true , is.not.str(1.23))
+    assert.equal(true , is.not.str(-42))
+    assert.equal(true , is.not.str(-1))
+    assert.equal(true , is.not.str(0))
+    assert.equal(true , is.not.str(666)) // :metal:
+  })
+
   it('emptyString', function(){
-    var fn = function(){}
     assert.equal(false, is.emptyString(fn))
     assert.equal(false, is.emptyString(new Date()))
     assert.equal(false, is.emptyString(undefined))
@@ -43,6 +102,66 @@ describe('strings', function(){
     assert.equal(false, is.emptyString(-1))
     assert.equal(false, is.emptyString(0))
     assert.equal(false, is.emptyString(666)) // :metal:
+  })
+
+  it('not.emptyString', function(){
+    assert.equal(true , is.not.emptyString(fn))
+    assert.equal(true , is.not.emptyString(new Date()))
+    assert.equal(true , is.not.emptyString(undefined))
+    assert.equal(true , is.not.emptyString(NaN))
+    assert.equal(true , is.not.emptyString(null))
+    assert.equal(true , is.not.emptyString(true))
+    assert.equal(true , is.not.emptyString(false))
+    assert.equal(true , is.not.emptyString({}))
+    assert.equal(true , is.not.emptyString([]))
+    assert.equal(false, is.not.emptyString(""))
+    assert.equal(false, is.not.emptyString("  "))
+    assert.equal(true , is.not.emptyString("asdf"))
+    assert.equal(true , is.not.emptyString(1.23))
+    assert.equal(true , is.not.emptyString(-42))
+    assert.equal(true , is.not.emptyString(-1))
+    assert.equal(true , is.not.emptyString(0))
+    assert.equal(true , is.not.emptyString(666)) // :metal:
+  })
+
+  it('emtStr', function(){
+    assert.equal(false, is.emtStr(fn))
+    assert.equal(false, is.emtStr(new Date()))
+    assert.equal(false, is.emtStr(undefined))
+    assert.equal(false, is.emtStr(NaN))
+    assert.equal(false, is.emtStr(null))
+    assert.equal(false, is.emtStr(true))
+    assert.equal(false, is.emtStr(false))
+    assert.equal(false, is.emtStr({}))
+    assert.equal(false, is.emtStr([]))
+    assert.equal(true,  is.emtStr(""))
+    assert.equal(true,  is.emtStr("  "))
+    assert.equal(false, is.emtStr("asdf"))
+    assert.equal(false, is.emtStr(1.23))
+    assert.equal(false, is.emtStr(-42))
+    assert.equal(false, is.emtStr(-1))
+    assert.equal(false, is.emtStr(0))
+    assert.equal(false, is.emtStr(666)) // :metal:
+  })
+
+  it('not.emtStr', function(){
+    assert.equal(true , is.not.emtStr(fn))
+    assert.equal(true , is.not.emtStr(new Date()))
+    assert.equal(true , is.not.emtStr(undefined))
+    assert.equal(true , is.not.emtStr(NaN))
+    assert.equal(true , is.not.emtStr(null))
+    assert.equal(true , is.not.emtStr(true))
+    assert.equal(true , is.not.emtStr(false))
+    assert.equal(true , is.not.emtStr({}))
+    assert.equal(true , is.not.emtStr([]))
+    assert.equal(false, is.not.emtStr(""))
+    assert.equal(false, is.not.emtStr("  "))
+    assert.equal(true , is.not.emtStr("asdf"))
+    assert.equal(true , is.not.emtStr(1.23))
+    assert.equal(true , is.not.emtStr(-42))
+    assert.equal(true , is.not.emtStr(-1))
+    assert.equal(true , is.not.emtStr(0))
+    assert.equal(true , is.not.emtStr(666)) // :metal:
   })
 
 })
