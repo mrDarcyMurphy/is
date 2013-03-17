@@ -2,7 +2,7 @@
 
 A simple validation module striving for code minimalism, a clear declarative syntax, and a thorough test suite.
 
-Pairs with [prove](https://github.com/mikefrey/prove) to for validation sugar.
+Pairs with [prove](https://github.com/mikefrey/prove) for validation sugar.
 
 ## Installation
 
@@ -21,6 +21,9 @@ if (is.present(metal) && is.aNumber(metal)) {
   headBang();
 }
 ```
+
+For now, check the source and tests for a full run down of how things work.
+
 
 ## Types of Validations
 
@@ -76,5 +79,3 @@ if (is.present(metal) && is.aNumber(metal)) {
 ```javascript
 is.not.greaterThan(1, 2) // true : 1 is not greater than 2
 ```
-
-Check the tests for a full run down of how things shake down.
