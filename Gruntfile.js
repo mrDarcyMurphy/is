@@ -24,7 +24,8 @@ module.exports = function(grunt) {
   })
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'simplemocha', 'uglify'])
+  grunt.registerTask('default', ['jshint', 'simplemocha'])
+  grunt.registerTask('min', ['default', 'uglify'])
 
   // load the grunt task plugins
   grunt.loadNpmTasks('grunt-contrib-jshint')
