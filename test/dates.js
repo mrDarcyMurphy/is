@@ -34,10 +34,90 @@ describe('dates', function(){
     assert.equal(false, is.date(666))
   })
 
+  it('not.date', function(){
+    assert.equal(true , is.not.date(fn))
+    assert.equal(false, is.not.date(new Date()))
+    assert.equal(true , is.not.date(undefined))
+    assert.equal(true , is.not.date(NaN))
+    assert.equal(true , is.not.date(null))
+    assert.equal(true , is.not.date(true))
+    assert.equal(true , is.not.date(false))
+    assert.equal(true , is.not.date({}))
+    assert.equal(true , is.not.date([]))
+    assert.equal(true , is.not.date(""))
+    assert.equal(true , is.not.date("  "))
+    assert.equal(true , is.not.date("asdf"))
+    assert.equal(true , is.not.date("1.23"))
+    assert.equal(true , is.not.date("-42"))
+    assert.equal(true , is.not.date("-42.01"))
+    assert.equal(true , is.not.date("-1"))
+    assert.equal(true , is.not.date("0"))
+    assert.equal(true , is.not.date("666"))
+    assert.equal(true , is.not.date(1.23))
+    assert.equal(true , is.not.date(-42))
+    assert.equal(true , is.not.date(-1))
+    assert.equal(true , is.not.date(0))
+    assert.equal(true , is.not.date(666))
+  })
+
   it('today', function(){
     assert.equal(false, is.today(past))
     assert.equal(true , is.today(today))
     assert.equal(false, is.today(future))
+
+    assert.equal(false, is.today(fn))
+    assert.equal(true , is.today(new Date()))
+    assert.equal(false, is.today(undefined))
+    assert.equal(false, is.today(NaN))
+    assert.equal(false, is.today(null))
+    assert.equal(false, is.today(true))
+    assert.equal(false, is.today(false))
+    assert.equal(false, is.today({}))
+    assert.equal(false, is.today([]))
+    assert.equal(false, is.today(""))
+    assert.equal(false, is.today("  "))
+    assert.equal(false, is.today("asdf"))
+    assert.equal(false, is.today("1.23"))
+    assert.equal(false, is.today("-42"))
+    assert.equal(false, is.today("-42.01"))
+    assert.equal(false, is.today("-1"))
+    assert.equal(false, is.today("0"))
+    assert.equal(false, is.today("666"))
+    assert.equal(false, is.today(1.23))
+    assert.equal(false, is.today(-42))
+    assert.equal(false, is.today(-1))
+    assert.equal(false, is.today(0))
+    assert.equal(false, is.today(666))
+  })
+
+  it('not.today', function(){
+    assert.equal(true , is.not.today(past))
+    assert.equal(false, is.not.today(today))
+    assert.equal(true , is.not.today(future))
+
+    assert.equal(true , is.not.today(fn))
+    assert.equal(false, is.not.today(new Date()))
+    assert.equal(true , is.not.today(undefined))
+    assert.equal(true , is.not.today(NaN))
+    assert.equal(true , is.not.today(null))
+    assert.equal(true , is.not.today(true))
+    assert.equal(true , is.not.today(false))
+    assert.equal(true , is.not.today({}))
+    assert.equal(true , is.not.today([]))
+    assert.equal(true , is.not.today(""))
+    assert.equal(true , is.not.today("  "))
+    assert.equal(true , is.not.today("asdf"))
+    assert.equal(true , is.not.today("1.23"))
+    assert.equal(true , is.not.today("-42"))
+    assert.equal(true , is.not.today("-42.01"))
+    assert.equal(true , is.not.today("-1"))
+    assert.equal(true , is.not.today("0"))
+    assert.equal(true , is.not.today("666"))
+    assert.equal(true , is.not.today(1.23))
+    assert.equal(true , is.not.today(-42))
+    assert.equal(true , is.not.today(-1))
+    assert.equal(true , is.not.today(0))
+    assert.equal(true , is.not.today(666))
   })
 
   it('today + attr', function(){
@@ -52,16 +132,40 @@ describe('dates', function(){
     assert.equal(true , is.today(future, future))
   })
 
+  it('not.today + attr', function(){
+    assert.equal(false, is.not.today(past, past))
+    assert.equal(true , is.not.today(past, today))
+    assert.equal(true , is.not.today(past, future))
+    assert.equal(true , is.not.today(today, past))
+    assert.equal(false, is.not.today(today, today))
+    assert.equal(true , is.not.today(today, future))
+    assert.equal(true , is.not.today(future, past))
+    assert.equal(true , is.not.today(future, today))
+    assert.equal(false, is.not.today(future, future))
+  })
+
   it('futureDate', function(){
     assert.equal(false, is.futureDate(past))
     assert.equal(false, is.futureDate(today))
     assert.equal(true , is.futureDate(future))
   })
 
+  it('not.futureDate', function(){
+    assert.equal(true , is.not.futureDate(past))
+    assert.equal(true , is.not.futureDate(today))
+    assert.equal(false, is.not.futureDate(future))
+  })
+
   it('future', function(){
     assert.equal(false, is.future(past))
     assert.equal(false, is.future(today))
     assert.equal(true , is.future(future))
+  })
+
+  it('not.future', function(){
+    assert.equal(true , is.not.future(past))
+    assert.equal(true , is.not.future(today))
+    assert.equal(false, is.not.future(future))
   })
 
   it('futureDate + attr', function(){
@@ -76,16 +180,40 @@ describe('dates', function(){
     assert.equal(false, is.futureDate(future, future))
   })
 
+  it('not.futureDate + attr', function(){
+    assert.equal(true , is.not.futureDate(past, past))
+    assert.equal(true , is.not.futureDate(past, today))
+    assert.equal(true , is.not.futureDate(past, future))
+    assert.equal(false, is.not.futureDate(today, past))
+    assert.equal(true , is.not.futureDate(today, today))
+    assert.equal(true , is.not.futureDate(today, future))
+    assert.equal(false, is.not.futureDate(future, past))
+    assert.equal(false, is.not.futureDate(future, today))
+    assert.equal(true , is.not.futureDate(future, future))
+  })
+
   it('pastDate', function(){
     assert.equal(true , is.pastDate(past))
     assert.equal(false, is.pastDate(today))
     assert.equal(false, is.pastDate(future))
   })
 
+  it('not.pastDate', function(){
+    assert.equal(false, is.not.pastDate(past))
+    assert.equal(true , is.not.pastDate(today))
+    assert.equal(true , is.not.pastDate(future))
+  })
+
   it('past', function(){
     assert.equal(true , is.past(past))
     assert.equal(false, is.past(today))
     assert.equal(false, is.past(future))
+  })
+
+  it('not.past', function(){
+    assert.equal(false, is.not.past(past))
+    assert.equal(true , is.not.past(today))
+    assert.equal(true , is.not.past(future))
   })
 
   it('pastDate + attr', function(){
@@ -98,6 +226,18 @@ describe('dates', function(){
     assert.equal(false, is.pastDate(future, past))
     assert.equal(false, is.pastDate(future, today))
     assert.equal(false, is.pastDate(future, future))
+  })
+
+  it('not.pastDate + attr', function(){
+    assert.equal(true , is.not.pastDate(past, past))
+    assert.equal(false, is.not.pastDate(past, today))
+    assert.equal(false, is.not.pastDate(past, future))
+    assert.equal(true , is.not.pastDate(today, past))
+    assert.equal(true , is.not.pastDate(today, today))
+    assert.equal(false, is.not.pastDate(today, future))
+    assert.equal(true , is.not.pastDate(future, past))
+    assert.equal(true , is.not.pastDate(future, today))
+    assert.equal(true , is.not.pastDate(future, future))
   })
 
   it("doesn't choke on bad data", function(){
@@ -116,6 +256,22 @@ describe('dates', function(){
     assert.equal(false, is.futureDate(past, "garbage"))
     assert.equal(false, is.futureDate(today, "garbage"))
     assert.equal(true , is.futureDate(future, "garbage"))
+
+    assert.equal(true , is.not.today("garbage"))
+    assert.equal(true , is.not.pastDate("garbage"))
+    assert.equal(true , is.not.futureDate("garbage"))
+    assert.equal(true , is.not.today("garbage", "garbage"))
+    assert.equal(true , is.not.pastDate("garbage", "garbage"))
+    assert.equal(true , is.not.futureDate("garbage", "garbage"))
+    assert.equal(false, is.not.pastDate(past, "garbage"))
+    assert.equal(true , is.not.pastDate(today, "garbage"))
+    assert.equal(true , is.not.pastDate(future, "garbage"))
+    assert.equal(true , is.not.today(past, "garbage"))
+    assert.equal(false, is.not.today(today, "garbage"))
+    assert.equal(true , is.not.today(future, "garbage"))
+    assert.equal(true , is.not.futureDate(past, "garbage"))
+    assert.equal(true , is.not.futureDate(today, "garbage"))
+    assert.equal(false, is.not.futureDate(future, "garbage"))
   })
 
 
