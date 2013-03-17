@@ -1,7 +1,7 @@
 var assert = require('assert')
 var is = require('../lib/is')
 
-describe('isnt', function(){
+describe('is.not', function(){
 
   it('has no toNumber', function(){
     assert.equal(is.not.toNumber, undefined)
