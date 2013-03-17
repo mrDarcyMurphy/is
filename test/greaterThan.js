@@ -4,7 +4,7 @@ var fn = function(){}
 var exp = (666).toExponential()
 var hex = 0x1
 
-describe('operators', function(){
+describe('greater than', function(){
 
   it('greaterThan', function(){
     assert.equal(false, is.greaterThan(fn))
