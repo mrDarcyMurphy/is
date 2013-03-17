@@ -274,6 +274,18 @@ describe('dates', function(){
     assert.equal(false, is.not.futureDate(future, "garbage"))
   })
 
+  it('works with equal', function(){
+    assert.equal(true , is.equal(past, past))
+    assert.equal(false, is.equal(past, today))
+    assert.equal(false, is.equal(past, future))
+    assert.equal(false, is.equal(today, past))
+    assert.equal(true , is.equal(today, today))
+    assert.equal(false, is.equal(today, future))
+    assert.equal(false, is.equal(future, past))
+    assert.equal(false, is.equal(future, today))
+    assert.equal(true , is.equal(future, future))
+  })
+
   it('works with greaterThan', function(){
     assert.equal(false, is.greaterThan(past, past))
     assert.equal(false, is.greaterThan(past, today))
