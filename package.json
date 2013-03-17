@@ -19,5 +19,15 @@
     "grunt-contrib-uglify": "0.1.x",
     "grunt-contrib-jshint": "~0.2.0",
     "grunt-simple-mocha": "~0.3.2"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": {
+      "ie": [ 6, 7, 8, 9, 10 ],
+      "firefox": [ 19 ],
+      "chrome": [ 25 ],
+      "safari": [ 5.1 ],
+      "opera": [ 12 ]
+    }
   }
 }
