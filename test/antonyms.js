@@ -1,8 +1,5 @@
 var assert = require('assert')
 var is = require('../lib/is')
-var isnt = is.isnt
-
-var fn = function(){}
 
 describe('isnt', function(){
 
