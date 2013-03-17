@@ -22,6 +22,7 @@
   },
   "testling": {
     "files": "test/*.js",
+    "harness" : "mocha",
     "browsers": {
       "ie": [ 6, 7, 8, 9, 10 ],
       "firefox": [ 19 ],
