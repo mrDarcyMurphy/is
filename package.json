@@ -1,0 +1,34 @@
+{
+  "name": "is-it",
+  "description": "simple validations",
+  "version": "1.0.1",
+  "keywords": [
+    "is",
+    "validation"
+  ],
+  "homepage": "http://github.com/mrDarcyMurphy/is",
+  "author": "Darcy Murphy <mrDarcyMurphy@gmail.com> (http://github.com/mrDarcyMurphy)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrDarcyMurphy/is.git"
+  },
+  "main": "./lib/is.js",
+  "devDependencies": {
+    "mocha": "*",
+    "grunt": "0.4.x",
+    "grunt-contrib-uglify": "0.1.x",
+    "grunt-contrib-jshint": "~0.2.0",
+    "grunt-simple-mocha": "~0.3.2"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "harness" : "mocha",
+    "browsers": {
+      "ie": [ 6, 7, 8, 9, 10 ],
+      "firefox": [ 19 ],
+      "chrome": [ 25 ],
+      "safari": [ 5.1 ],
+      "opera": [ 12 ]
+    }
+  }
+}

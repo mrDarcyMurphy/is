@@ -1,0 +1,27 @@
+{
+  "asi": true,
+  "boss": true,
+  "browser": true,
+  "curly": false,
+  "devel": false,
+  "eqnull": true,
+  "eqeqeq": false,
+  "expr": true,
+  "immed": false,
+  "latedef": true,
+  "loopfunc": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  "unused": true,
+
+  "predef" : [
+    "__dirname",
+    "define",
+    "describe",
+    "it",
+    "module",
+    "require",
+    "toString"
+  ]
+}
