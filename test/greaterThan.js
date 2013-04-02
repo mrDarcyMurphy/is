@@ -1,5 +1,3 @@
-var assert = require('assert')
-var is = require('../lib/is')
 var fn = function(){}
 var exp = (666).toExponential()
 var hex = 0x1

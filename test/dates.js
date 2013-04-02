@@ -1,5 +1,3 @@
-var assert = require('assert')
-var is = require('../lib/is')
 var fn = function(){}
 
 var future = new Date('04/16/9999')

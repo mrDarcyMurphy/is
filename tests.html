@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>is &ndash; test suite</title>
+  <link rel="stylesheet" href="./css/mocha.css" />
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="https://raw.github.com/mrDarcyMurphy/is/master/lib/is.js"></script>
+  <script src="./js/chai.js"></script>
+  <script src="./js/mocha.js"></script>
+  <script>
+    mocha.setup('bdd')
+    var assert = chai.assert
+  </script>
+  <script src="./test/antonyms.js"></script>
+  <script src="./test/dates.js"></script>
+  <script src="./test/equal.js"></script>
+  <script src="./test/greaterThan.js"></script>
+  <script src="./test/helpers.js"></script>
+  <script src="./test/integers.js"></script>
+  <script src="./test/lessThan.js"></script>
+  <script src="./test/numbers.js"></script>
+  <script src="./test/primitives.js"></script>
+  <script src="./test/strings.js"></script>
+  <script>
+    mocha.run()
+  </script>
+</body>
+</html>
