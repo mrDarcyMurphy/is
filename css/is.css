@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'GoudyBookletter';
-  src: url('/font/GoudyStM-webfont.eot'); /* IE9 Compat Modes */
-  src: url('/font/GoudyStM-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/font/GoudyStM-webfont.woff') format('woff'), /* Modern Browsers */
-       url('/font/GoudyStM-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/font/GoudyStM-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('/is/font/GoudyStM-webfont.eot'); /* IE9 Compat Modes */
+  src: url('/is/font/GoudyStM-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/is/font/GoudyStM-webfont.woff') format('woff'), /* Modern Browsers */
+       url('/is/font/GoudyStM-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/is/font/GoudyStM-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
   }
 
 @font-face {
   font-family: 'GoudyBookletterItalic';
-  src: url('/font/GoudyStM-Italic-webfont.eot'); /* IE9 Compat Modes */
-  src: url('/font/GoudyStM-Italic-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/font/GoudyStM-Italic-webfont.woff') format('woff'), /* Modern Browsers */
-       url('/font/GoudyStM-Italic-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/font/GoudyStM-Italic-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('/is/font/GoudyStM-Italic-webfont.eot'); /* IE9 Compat Modes */
+  src: url('/is/font/GoudyStM-Italic-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/is/font/GoudyStM-Italic-webfont.woff') format('woff'), /* Modern Browsers */
+       url('/is/font/GoudyStM-Italic-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/is/font/GoudyStM-Italic-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
   }
 
 body { font-family: "GoudyBookletter", Georgia, serif; text-align: center; }
