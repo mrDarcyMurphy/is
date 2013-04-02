@@ -16,6 +16,21 @@
        url('../font/GoudyStM-Italic-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
   }
 
-body { font-family: "GoudyBookletter", Georgia, serif; text-align: center; }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; margin: 0; }
 
-header h2 { font-variant: small-caps; }
+body {
+  background: #ECE5CE;
+  color: #774F38;
+  font: 16px "GoudyBookletter", Georgia, serif;
+  text-align: center;
+}
+
+a { color: #774F38; box-shadow: inset 0 -3px 0 #ECE5CE, inset 0 -4px 0 #E08E79; text-decoration: none; }
+a:hover { box-shadow: inset 0 -2px 0 #ECE5CE, inset 0 -4px 0 #E08E79; }
+
+
+i { font-family: "GoudyBookletterItalic", Georgia, serif; }
+
+h1 { font-size: 72px; }
+h2 { font-size: 24px; }
+h3 { font-size: 16px; font-variant: small-caps; }
