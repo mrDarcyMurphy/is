@@ -6,8 +6,6 @@ Pairs with [prove](https://github.com/mikefrey/prove) for validation sugar.
 
 [![browser support](http://ci.testling.com/mrDarcyMurphy/is.png)](http://ci.testling.com/mrDarcyMurphy/is)
 
-* Note: It's [chai.assert](https://github.com/chaijs/chai/issues/117) that fails in IE <= 8, not the module.
-
 ## Installation
 
 ```
