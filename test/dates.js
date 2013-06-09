@@ -70,6 +70,12 @@ describe('dates', function(){
       assert.equal(x.toISOString(), a)
       assert.equal(y.toISOString(), b)
     })
+    it('today', function() {
+      var a = (new Date())
+      var aISO = a.toISOString()
+      assert(is.today(a))
+      assert.equal(a.toISOString(), aISO)
+    })
   })
 
   it('today', function(){
