@@ -71,10 +71,16 @@ describe('dates', function(){
       assert.equal(y.toISOString(), b)
     })
     it('today', function() {
-      var a = (new Date())
-      var aISO = a.toISOString()
+      var a = new Date()
+      var i = a.toISOString()
       assert(is.today(a))
-      assert.equal(a.toISOString(), aISO)
+      assert.equal(a.toISOString(), i)
+    })
+    it('futureDate', function(){
+      var a = new Date('9999-01-01T07:30:00.000Z')
+      var i = a.toISOString()
+      assert(is.futureDate(a))
+      assert.equal(a.toISOString(), i)
     })
   })
 
