@@ -25,10 +25,13 @@
     "harness" : "mocha",
     "browsers": {
       "ie": [ 9, 10 ],
-      "firefox": [ 19 ],
-      "chrome": [ 25 ],
-      "safari": [ 5.1 ],
-      "opera": [ 12 ]
+      "firefox": [ 19, 20, 21, "nightly" ],
+      "chrome": [ 25, 26, 27, "canary" ],
+      "safari": [ 5.1, 6.0 ],
+      "opera": [ 12.0, "next" ],
+      "iphone": [ 6.0 ],
+      "ipad": [ 6.0 ],
+      "android-browser": [ 4.2 ]
     }
   }
 }
