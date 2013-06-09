@@ -60,6 +60,18 @@ describe('dates', function(){
     assert.equal(true , is.not.date(666))
   })
 
+  describe("integrity - won't change passed in dates", function() {
+    it('sameDate', function() {
+      var a = '2013-06-08T00:00:00.000Z'
+      var b = '2013-06-08T00:00:00.000Z'
+      var x = new Date(a)
+      var y = new Date(b)
+      assert(is.sameDate(x, y))
+      assert.equal(x.toISOString(), a)
+      assert.equal(y.toISOString(), b)
+    })
+  })
+
   it('today', function(){
     assert.equal(false, is.today(past))
     assert.equal(true , is.today(today))
