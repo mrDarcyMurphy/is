@@ -82,6 +82,12 @@ describe('dates', function(){
       assert(is.futureDate(a))
       assert.equal(a.toISOString(), i)
     })
+    it('pastDate', function(){
+      var a = new Date('1999-01-01T07:30:00.000Z')
+      var i = a.toISOString()
+      assert(is.pastDate(a))
+      assert.equal(a.toISOString(), i)
+    })
   })
 
   it('today', function(){
