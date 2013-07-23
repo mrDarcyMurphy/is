@@ -81,3 +81,7 @@ For now, check the source and tests for a full run down of how things work.
 ```javascript
 is.not.greaterThan(1, 2) // true : 1 is not greater than 2
 ```
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mrDarcyMurphy/is/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
