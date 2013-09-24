@@ -20,6 +20,8 @@ describe('plainObject', function(){
     assert.equal(true , is.plainObject({foo:'bar'}), "{foo:'bar'} is wrong")
     assert.equal(false, is.plainObject(new Array()), "new Array() is wrong")
     assert.equal(false, is.plainObject([]), '[] is wrong')
+    assert.equal(false, is.plainObject(['foo', 'bar']), "['foo', 'bar'] is wrong")
+    assert.equal(false, is.plainObject(arguments), "arguments is wrong")
     assert.equal(false, is.plainObject(""), '"" is wrong')
     assert.equal(false, is.plainObject("  "), '"  " is wrong')
     assert.equal(false, is.plainObject("asdf"), '"asdf" is wrong')
