@@ -5,9 +5,9 @@ var fn = function(){}
 var exp = (666).toExponential()
 var hex = 0x1
 
-describe('primitives', function(){
+describe('Arrays', function(){
 
-  it('array', function(){
+  it('is.array', function(){
     assert.equal(false, is.array( fn ), 'fn should be false')
     assert.equal(false, is.array( new Date() ), 'new Date() should be false')
     assert.equal(false, is.array( undefined ), 'undefined should be false')
@@ -53,73 +53,86 @@ describe('primitives', function(){
     assert.equal(false, is.array( "+Infinity" ), '"+Infinity" should be false')
   })
 
-  it('not.array', function(){
-    assert.equal(true , is.not.array(fn))
-    assert.equal(true , is.not.array(new Date()))
-    assert.equal(true , is.not.array(undefined))
-    assert.equal(true , is.not.array(NaN))
-    assert.equal(true , is.not.array(null))
-    assert.equal(true , is.not.array(true))
-    assert.equal(true , is.not.array(false))
-    assert.equal(true , is.not.array(new Object()))
-    assert.equal(true , is.not.array({}))
+  it('is.not.array', function(){
     assert.equal(true , is.not.array({foo:'bar'}))
     assert.equal(false, is.not.array(new Array()))
     assert.equal(false, is.not.array([]))
-    assert.equal(true , is.not.array(""))
-    assert.equal(true , is.not.array("   "))
-    assert.equal(true , is.not.array("asdf"))
-    assert.equal(true , is.not.array(1.23))
-    assert.equal(true , is.not.array(-42))
-    assert.equal(true , is.not.array(-1))
-    assert.equal(true , is.not.array(0))
-    assert.equal(true , is.not.array(666))
   })
 
-  it('arr', function(){
-    assert.equal(false, is.arr(fn))
-    assert.equal(false, is.arr(new Date()))
-    assert.equal(false, is.arr(undefined))
-    assert.equal(false, is.arr(NaN))
-    assert.equal(false, is.arr(null))
-    assert.equal(false, is.arr(true))
-    assert.equal(false, is.arr(false))
-    assert.equal(false, is.arr(new Object()))
-    assert.equal(false, is.arr({}))
+  it('is.arr', function(){
     assert.equal(false, is.arr({foo:'bar'}))
     assert.equal(true , is.arr(new Array()))
-    assert.equal(true , is.arr([]))
-    assert.equal(false, is.arr(""))
-    assert.equal(false, is.arr("   "))
-    assert.equal(false, is.arr("asdf"))
-    assert.equal(false, is.arr(1.23))
-    assert.equal(false, is.arr(-42))
-    assert.equal(false, is.arr(-1))
-    assert.equal(false, is.arr(0))
-    assert.equal(false, is.arr(666))
   })
 
-  it('not.arr', function(){
-    assert.equal(true , is.not.arr(fn))
-    assert.equal(true , is.not.arr(new Date()))
-    assert.equal(true , is.not.arr(undefined))
-    assert.equal(true , is.not.arr(NaN))
-    assert.equal(true , is.not.arr(null))
-    assert.equal(true , is.not.arr(true))
-    assert.equal(true , is.not.arr(false))
-    assert.equal(true , is.not.arr(new Object()))
-    assert.equal(true , is.not.arr({}))
+  it('is.not.arr', function(){
     assert.equal(true , is.not.arr({foo:'bar'}))
     assert.equal(false, is.not.arr(new Array()))
     assert.equal(false, is.not.arr([]))
-    assert.equal(true , is.not.arr(""))
-    assert.equal(true , is.not.arr("   "))
-    assert.equal(true , is.not.arr("asdf"))
-    assert.equal(true , is.not.arr(1.23))
-    assert.equal(true , is.not.arr(-42))
-    assert.equal(true , is.not.arr(-1))
-    assert.equal(true , is.not.arr(0))
-    assert.equal(true , is.not.arr(666))
+  })
+
+})
+
+describe('Arguments', function(){
+
+  it('is.arguments', function(){
+    assert.equal(false, is.arguments( fn ), 'fn should be false')
+    assert.equal(false, is.arguments( new Date() ), 'new Date() should be false')
+    assert.equal(false, is.arguments( undefined ), 'undefined should be false')
+    assert.equal(false, is.arguments( NaN ), 'NaN should be false')
+    assert.equal(false, is.arguments( null ), 'null should be false')
+    assert.equal(false, is.arguments( true ), 'true should be false')
+    assert.equal(false, is.arguments( false ), 'false should be false')
+    assert.equal(false, is.arguments( Object.create(null) ), 'Object.create(null) should be false')
+    assert.equal(false, is.arguments( Object.create(Object.prototype) ), 'Object.create(Object.prototype) should be false')
+    assert.equal(false, is.arguments( new Object() ), 'new Object() should be false')
+    assert.equal(false, is.arguments( {} ), '{} should be false')
+    assert.equal(false, is.arguments( {foo:"bar"} ), '{foo:"bar"} should be false')
+    assert.equal(false, is.arguments( {length:1} ), '{length:1} should be false')
+    assert.equal(false, is.arguments( new Array() ), 'new Array() should be false')
+    assert.equal(false, is.arguments( [] ), '[] should be false')
+    assert.equal(false, is.arguments( ["foo", "bar"] ), '["foo", "bar"] should be false')
+    assert.equal(true , is.arguments( arguments ), 'arguments should be true')
+    assert.equal(false, is.arguments( "" ), '"" should be false')
+    assert.equal(false, is.arguments( "  " ), '"  " should be false')
+    assert.equal(false, is.arguments( "asdf" ), '"asdf" should be false')
+    assert.equal(false, is.arguments( "1.23" ), '"1.23" should be false')
+    assert.equal(false, is.arguments( "-42" ), '"-42" should be false')
+    assert.equal(false, is.arguments( "-42.01" ), '"-42.01" should be false')
+    assert.equal(false, is.arguments( "-1" ), '"-1" should be false')
+    assert.equal(false, is.arguments( "0" ), '"0" should be false')
+    assert.equal(false, is.arguments( "666" ), '"666" should be false')
+    assert.equal(false, is.arguments( 1.23 ), '1.23 should be false')
+    assert.equal(false, is.arguments( -42 ), '-42 should be false')
+    assert.equal(false, is.arguments( -1 ), '-1 should be false')
+    assert.equal(false, is.arguments( 0 ), '0 should be false')
+    assert.equal(false, is.arguments( 666 ), '666 should be false')
+    assert.equal(false, is.arguments( -exp ), '-exp should be false')
+    assert.equal(false, is.arguments( exp ), 'exp should be false')
+    assert.equal(false, is.arguments( +exp ), '+exp should be false')
+    assert.equal(false, is.arguments( -hex ), '-hex should be false')
+    assert.equal(false, is.arguments( hex ), 'hex should be false')
+    assert.equal(false, is.arguments( +hex ), '+hex should be false')
+    assert.equal(false, is.arguments( -Infinity ), '-Infinity should be false')
+    assert.equal(false, is.arguments( Infinity ), 'Infinity should be false')
+    assert.equal(false, is.arguments( +Infinity ), '+Infinity should be false')
+    assert.equal(false, is.arguments( "-Infinity" ), '"-Infinity" should be false')
+    assert.equal(false, is.arguments( "Infinity" ), '"Infinity" should be false')
+    assert.equal(false, is.arguments( "+Infinity" ), '"+Infinity" should be false')
+  })
+
+  it('is.not.arguments', function(){
+    assert.equal(false, is.not.arguments(arguments))
+    assert.equal(true , is.not.arguments([]))
+  })
+
+  it('is.arg', function(){
+    assert.equal(true , is.arg(arguments))
+    assert.equal(false, is.arg([]))
+  })
+
+  it('is.not.arg', function(){
+    assert.equal(false, is.not.arg(arguments))
+    assert.equal(true , is.not.arg([]))
   })
 
 })
