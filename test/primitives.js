@@ -17,6 +17,7 @@ describe('primitives', function(){
     assert.equal(false, is.array({foo:'bar'}))
     assert.equal(true , is.array(new Array()))
     assert.equal(true , is.array([]))
+    assert.equal(false, is.array(arguments))
     assert.equal(false, is.array(""))
     assert.equal(false, is.array("   "))
     assert.equal(false, is.array("asdf"))
