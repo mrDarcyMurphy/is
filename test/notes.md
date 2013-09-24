@@ -15,7 +15,7 @@ assert.equal(false, is.whatever( Object.create(null) ), 'Object.create(null) sho
 assert.equal(false, is.whatever( Object.create(Object.prototype) ), 'Object.create(Object.prototype) should be false')
 assert.equal(false, is.whatever( new Object() ), 'new Object() should be false')
 assert.equal(false, is.whatever( {} ), '{} should be false')
-assert.equal(false, is.whatever( {foo:'bar'} ), '{foo:'bar'} should be false')
+assert.equal(false, is.whatever( {foo:"bar"} ), '{foo:"bar"} should be false')
 assert.equal(false, is.whatever( {length:1} ), '{length:1} should be false')
 assert.equal(false, is.whatever( new Array() ), 'new Array() should be false')
 assert.equal(false, is.whatever( [] ), '[] should be false')
