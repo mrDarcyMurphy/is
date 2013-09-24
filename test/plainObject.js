@@ -15,11 +15,14 @@ describe('plainObject', function(){
     assert.equal(false, is.plainObject(null), 'null should be false')
     assert.equal(false, is.plainObject(true), 'true should be false')
     assert.equal(false, is.plainObject(false), 'false should be false')
+
     assert.equal(true , is.plainObject(Object.create(null)), "Object.create(null) should be true")
     assert.equal(true , is.plainObject(Object.create(Object.prototype)), "Object.create(Object.prototype) should be true")
     assert.equal(true , is.plainObject(new Object()), "new Object() should be true")
     assert.equal(true , is.plainObject({}), "{} should be true")
     assert.equal(true , is.plainObject({foo:'bar'}), "{foo:'bar'} should be true")
+    assert.equal(true , is.plainObject({length:1}), "{length:1} should be true")
+
     assert.equal(false, is.plainObject(new Array()), "new Array() should be false")
     assert.equal(false, is.plainObject([]), '[] should be false')
     assert.equal(false, is.plainObject(['foo', 'bar']), "['foo', 'bar'] should be false")
