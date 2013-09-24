@@ -9,6 +9,7 @@ module.exports = function(grunt) {
       }
     },
     simplemocha: {
+      options: { reporter: 'spec' },
       all: { src: 'test/**/*.js' }
     },
     uglify: {
