@@ -1,8 +1,8 @@
 # is-it
 
-A simple validation module striving for code minimalism, a clear declarative syntax, and a thorough test suite.
+A simple comparison module striving for code minimalism and a thorough test suite.
 
-Pairs with [prove](https://github.com/mikefrey/prove) for validation sugar.
+Pair `is` with [the-thing-is](https://github.com/mrDarcyMurphy/the-thing-is) for broader validation.
 
 [![browser support](http://ci.testling.com/mrDarcyMurphy/is.png)](http://ci.testling.com/mrDarcyMurphy/is)
 
@@ -27,33 +27,35 @@ if (is.present(metal) && is.aNumber(metal)) {
 For now, check the source and tests for a full run down of how things work.
 
 
-## Types of Validations
-
+## Comparisons
 
 ### Operators
 
+* `present`
 * `equal`, `eq`
 * `greaterThan`, `gt`
 * `greaterThanOrEqualTo`, `gte`
 * `lessThan`, `lt`
 * `lessThanOrEqualTo`, `lte`
 
-
 ### Primitives
 
-* `array`, `arr`
 * `boolean`, `bool`
-* `func`
 * `nil`
 * `undef`
-* `present`
 
+### Objects
+
+* `object`, `obj`
+* `plainObject`
+* `args`
+* `array`, `arr`
+* `func`
 
 ### Strings
 
 * `string`, `str`
 * `emptyString`, `emtStr`
-
 
 ### Numbers
 
@@ -64,7 +66,6 @@ For now, check the source and tests for a full run down of how things work.
 * `zero`
 * `aZero`
 
-
 ### Dates
 
 * `date`
@@ -72,7 +73,6 @@ For now, check the source and tests for a full run down of how things work.
 * `today`
 * `futureDate`, `future`
 * `pastDate`, `past`
-
 
 ### Antonyms
 
@@ -82,6 +82,7 @@ For now, check the source and tests for a full run down of how things work.
 is.not.greaterThan(1, 2) // true : 1 is not greater than 2
 ```
 
+## Helpers
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mrDarcyMurphy/is/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+* `toInteger`, `toInt`: converts a number to an integer, and `NaN` to `null` because you can do math with `null`.
+* `toNumber`, `toNum`: same, but respects decimals.
