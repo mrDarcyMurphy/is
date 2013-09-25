@@ -14,11 +14,11 @@
   },
   "main": "./lib/is.js",
   "devDependencies": {
-    "mocha": "*",
+    "mocha": "latest",
     "grunt": "0.4.x",
     "grunt-contrib-uglify": "0.1.x",
     "grunt-contrib-jshint": "~0.2.0",
-    "grunt-simple-mocha": "~0.3.2"
+    "grunt-simple-mocha": "latest"
   },
   "testling": {
     "files": "test/*.js",
