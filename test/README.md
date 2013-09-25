@@ -1,8 +1,6 @@
 # To Test `is` in your Browser
 
-There's an `index.html` and `index.min.html` in the test folder. For now, they load the lib so you can work with it. Eventually they'll have the full suite attached.
-
-Ideally, open index.html and watch it fly.
+There's `index.html` and `index.min.html` in the test folder. They load `is` so you can work with it.
 
 # Complete Set of Test Values
 
