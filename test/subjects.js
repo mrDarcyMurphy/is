@@ -50,8 +50,8 @@ function subjects() {
     'negativeInfinityString'      : "-Infinity",
     'infinityString'              : "Infinity",
     'positiveInfinityString'      : "+Infinity",
-    'rx'                          : /^foo/,
-    'newRegexp'                   : new RegExp("^foo"),
+    'regex'                       : /^foo/,
+    'newRegExp'                   : new RegExp("^foo"),
     'rxString'                    : "^foo"
   }
 

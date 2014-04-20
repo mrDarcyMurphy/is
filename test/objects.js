@@ -15,7 +15,8 @@ var objects = [
   'emptyArray',
   'plainArray',
   'args',
-  'rx'
+  'regex',
+  'newRegExp'
 ]
 
 var plainObjects = [

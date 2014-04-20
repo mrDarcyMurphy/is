@@ -1,6 +1,6 @@
 var asserts = require('./asserts.js')
 
-var regexs = ['rx', 'newRegexp']
+var regexs = ['regex', 'newRegExp']
 
 describe('regular expressions', function(){
 
