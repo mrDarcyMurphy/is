@@ -1,15 +1,16 @@
 var is = require('../lib/is.js')
 var assert = require('assert')
 var asserts = require('./asserts.js')
+var arrays = ['newArray', 'emptyArray', 'plainArray']
 
 describe('Arrays', function(){
 
   it('is.array', function(){
-    asserts.is('array', ['newArray', 'emptyArray', 'plainArray'])
+    asserts.is('array', arrays)
   })
 
   it('is.not.array', function(){
-    asserts.not('array', ['newArray', 'emptyArray', 'plainArray'])
+    asserts.not('array', arrays)
   })
 
   it('is.arr is an alias of is.array', function(){
