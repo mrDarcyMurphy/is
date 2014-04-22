@@ -1,8 +1,8 @@
 function subjects() {
 
   var fn = function(){}
-  var exp = (666).toExponential()
-  var hex = 0x1
+  var exp = (16777216).toExponential()
+  var hex = 0xf
 
   return {
     'alphaString'                 : "asdf",
@@ -14,6 +14,7 @@ function subjects() {
     'f'                           : false,
     'fn'                          : fn,
     'hexadecimal'                 : hex,
+    'hexadecimalString'           : '0xf',
     'infinity'                    : Infinity,
     'infinityString'              : "Infinity",
     'invalidHexadecimalString'    : '0xg',
@@ -23,7 +24,7 @@ function subjects() {
     'negativeHexadecimal'         : -hex,
     'negativeInfinity'            : -Infinity,
     'negativeInfinityString'      : "-Infinity",
-    'negativeIntegerInteger'      : -42,
+    'negativeInteger'             : -42,
     'negativeIntegerString'       : "-42",
     'negativeOne'                 : -1,
     'negativeOneString'           : "-1",
@@ -47,8 +48,8 @@ function subjects() {
     'positiveHexadecimal'         : +hex,
     'positiveInfinity'            : +Infinity,
     'positiveInfinityString'      : "+Infinity",
-    'positiveInteger'             : 666,
-    'positiveIntegerString'       : "666",
+    'positiveInteger'             : 16,
+    'positiveIntegerString'       : "16",
     'positiveZero'                : +0,
     'positiveZeroString'          : "+0",
     'regex'                       : /^foo/,
