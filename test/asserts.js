@@ -14,9 +14,9 @@ module.exports = {
     subjectKeys.forEach(function(key){
       if ( skippers.indexOf(key) > -1 ) return
       if ( keysThatPass.indexOf(key) > -1 )
-        assert.equal(true , is[method](subjects[key]), key + ' should be true.')
+        assert.equal(true , is[method](subjects[key]), key + ' is expected to pass.')
       else
-        assert.equal(false, is[method](subjects[key]), key + ' should be false.')
+        assert.equal(false, is[method](subjects[key]), key + ' is expected to fail.')
     })
   },
 
@@ -25,9 +25,9 @@ module.exports = {
     subjectKeys.forEach(function(key){
       if ( skippers.indexOf(key) > -1 ) return
       if ( keysThatPass.indexOf(key) > -1 )
-        assert.equal(true , is[method](subjects[key], standard), key + ' should be true.')
+        assert.equal(true , is[method](subjects[key], standard), key + ' is expected to pass.')
       else
-        assert.equal(false, is[method](subjects[key], standard), key + ' should be false.')
+        assert.equal(false, is[method](subjects[key], standard), key + ' is expected to fail.')
     })
   },
 
@@ -36,18 +36,18 @@ module.exports = {
     subjectKeys.forEach(function(key){
       if ( skippers.indexOf(key) > -1 ) return
       if ( keysThatFail.indexOf(key) > -1 )
-        assert.equal(false, is.not[method](subjects[key]), key + ' should be false.')
+        assert.equal(false, is.not[method](subjects[key]), key + ' is expected to fail.')
       else
-        assert.equal(true , is.not[method](subjects[key]), key + ' should be true.')
+        assert.equal(true , is.not[method](subjects[key]), key + ' is expected to pass.')
     })
   },
 
   notStandard: function(method, keysThatPass, standard) {
     subjectKeys.forEach(function(key){
       if ( keysThatPass.indexOf(key) > -1 )
-        assert.equal(true , is.not[method](subjects[key], standard), key + ' should be true.')
+        assert.equal(true , is.not[method](subjects[key], standard), key + ' is expected to pass.')
       else
-        assert.equal(false, is.not[method](subjects[key], standard), key + ' should be false.')
+        assert.equal(false, is.not[method](subjects[key], standard), key + ' is expected to fail.')
     })
   },
 
