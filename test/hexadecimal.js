@@ -2,8 +2,6 @@ var is = require('../lib/is')
 var assert = require('assert')
 var asserts = require('./asserts.js')
 
-var hexadecimal = [ 'zero', 'positiveInteger', 'hexadecimal', 'negativeInteger', 'negativeOne', 'positiveInteger' ]
-
 describe('hexadecimal', function(){
 
   it('hexadecimal', function(){
