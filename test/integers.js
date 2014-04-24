@@ -47,15 +47,11 @@ describe('Interger Strings', function(){
   it('is.aInteger', function(){
     asserts.is('aInteger', [
       'exponent',
-      'hexadecimalString',
-      'negativeHexadecimalString',
       'negativeIntegerString',
       'negativeOneString',
       'negativeZeroString',
       'negativeExponentString',
       'positiveIntegerString',
-      'positiveExponentString',
-      'positiveHexadecimalString',
       'positiveZeroString',
       'zeroString',
     ])
@@ -64,15 +60,11 @@ describe('Interger Strings', function(){
   it('is.not.aInteger', function(){
     asserts.not('aInteger', [
       'exponent',
-      'hexadecimalString',
-      'negativeHexadecimalString',
       'negativeIntegerString',
       'negativeOneString',
       'negativeZeroString',
       'negativeExponentString',
       'positiveIntegerString',
-      'positiveExponentString',
-      'positiveHexadecimalString',
       'positiveZeroString',
       'zeroString',
     ])

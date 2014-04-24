@@ -2,6 +2,7 @@ function subjects() {
 
   var fn = function(){}
   var exp = (16777216).toExponential()
+  var flexp = (1.6777216).toExponential()
   var hex = 0xf
 
   return {
@@ -11,6 +12,7 @@ function subjects() {
     'emptyObject'                 : {},
     'emptyString'                 : "",
     'exponent'                    : exp,
+    'floatingPointExponent'       : flexp,
     'f'                           : false,
     'fn'                          : fn,
     'hexadecimal'                 : hex,
@@ -22,6 +24,7 @@ function subjects() {
     'negativeExponent'            : -exp,
     'negativeFloatString'         : "-42.01",
     'negativeHexadecimal'         : -hex,
+    'negativeHexadecimalString'   : '-0xf',
     'negativeInfinity'            : -Infinity,
     'negativeInfinityString'      : "-Infinity",
     'negativeInteger'             : -42,
@@ -46,6 +49,7 @@ function subjects() {
     'positiveFloat'               : 3.14,
     'positiveFloatString'         : "3.14",
     'positiveHexadecimal'         : +hex,
+    'positiveHexadecimalString'   : '+0xf',
     'positiveInfinity'            : +Infinity,
     'positiveInfinityString'      : "+Infinity",
     'positiveInteger'             : 16,
