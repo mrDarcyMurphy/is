@@ -1,13 +1,112 @@
 var is = require('../lib/is')
 var assert = require('assert')
 var asserts = require('./asserts.js')
-
 var skippers = ['objectCreateNull']
 
-var greaterThanNothing = [ 'newDate', 't', 'newBooleanTrue', 'positiveFloatString', 'positiveIntegerString', 'positiveFloat', 'positiveInteger', 'exponent', 'positiveExponent', 'hexadecimal', 'positiveHexadecimal', 'infinity', 'positiveInfinity', 'infinityString', 'positiveInfinityString', 'hexadecimalString', 'floatingPointExponent' ]
-var greaterThanOne = ['newDate', 'positiveFloatString', 'positiveIntegerString', 'positiveFloat', 'positiveInteger', 'exponent', 'positiveExponent', 'infinity', 'positiveInfinity', 'infinityString', 'positiveInfinityString', 'hexadecimal', 'hexadecimalString', 'positiveHexadecimal', 'floatingPointExponent']
-var greaterThanNegativeOne = [ 'newDate', 'nil', 't', 'f', 'newBooleanTrue', 'newBooleanFalse', 'newArray', 'emptyArray', 'emptyString', 'whiteSpaceString', 'zeroString', 'negativeZero', 'zero', 'positiveZero', 'negativeZeroString', 'positiveZeroString', 'positiveFloatString', 'positiveIntegerString', 'positiveFloat', 'positiveInteger', 'exponent', 'positiveExponent', 'hexadecimal', 'positiveHexadecimal', 'infinity', 'positiveInfinity', 'infinityString', 'positiveInfinityString', 'hexadecimalString', 'floatingPointExponent' ]
-var greaterThanOrEqualToNothing = [ 'newDate', 'nil', 't', 'f', 'newBooleanTrue', 'newBooleanFalse', 'newArray', 'emptyArray', 'emptyString', 'whiteSpaceString', 'zeroString', 'negativeZero', 'zero', 'positiveZero', 'negativeZeroString', 'zeroString', 'positiveZeroString', 'positiveFloatString', 'positiveIntegerString', 'positiveFloat', 'positiveInteger', 'exponent', 'positiveExponent', 'hexadecimal', 'positiveHexadecimal', 'infinity', 'positiveInfinity', 'infinityString', 'positiveInfinityString', 'hexadecimalString', 'floatingPointExponent' ]
+var greaterThanNothing = [
+  'exponent',
+  'floatingPointExponent',
+  'hexadecimal',
+  'hexadecimalString',
+  'infinity',
+  'infinityString',
+  'newBooleanTrue',
+  'newDate',
+  'positiveExponent',
+  'positiveFloat',
+  'positiveFloatString',
+  'positiveHexadecimal',
+  'positiveInfinity',
+  'positiveInfinityString',
+  'positiveInteger',
+  'positiveIntegerString',
+  't'
+]
+
+var greaterThanOne = [
+  'exponent',
+  'floatingPointExponent',
+  'hexadecimal',
+  'hexadecimalString',
+  'infinity',
+  'infinityString',
+  'newDate',
+  'positiveExponent',
+  'positiveFloat',
+  'positiveFloatString',
+  'positiveHexadecimal',
+  'positiveInfinity',
+  'positiveInfinityString',
+  'positiveInteger',
+  'positiveIntegerString',
+]
+
+var greaterThanNegativeOne = [
+  'emptyArray',
+  'emptyString',
+  'exponent',
+  'f',
+  'floatingPointExponent',
+  'hexadecimal',
+  'hexadecimalString',
+  'infinity',
+  'infinityString',
+  'negativeZero',
+  'negativeZeroString',
+  'newArray',
+  'newBooleanFalse',
+  'newBooleanTrue',
+  'newDate',
+  'nil',
+  'positiveExponent',
+  'positiveFloat',
+  'positiveFloatString',
+  'positiveHexadecimal',
+  'positiveInfinity',
+  'positiveInfinityString',
+  'positiveInteger',
+  'positiveIntegerString',
+  'positiveZero',
+  'positiveZeroString',
+  't',
+  'whiteSpaceString',
+  'zero',
+  'zeroString'
+]
+
+var greaterThanOrEqualToNothing = [
+  'emptyArray',
+  'emptyString',
+  'exponent',
+  'f',
+  'floatingPointExponent',
+  'hexadecimal',
+  'hexadecimalString',
+  'infinity',
+  'infinityString',
+  'negativeZero',
+  'negativeZeroString',
+  'newArray',
+  'newBooleanFalse',
+  'newBooleanTrue',
+  'newDate',
+  'nil',
+  'positiveExponent',
+  'positiveFloat',
+  'positiveFloatString',
+  'positiveHexadecimal',
+  'positiveInfinity',
+  'positiveInfinityString',
+  'positiveInteger',
+  'positiveIntegerString',
+  'positiveZero',
+  'positiveZeroString',
+  't',
+  'whiteSpaceString',
+  'zero',
+  'zeroString',
+  'zeroString',
+]
 
 
 describe('is.greaterThan', function(){
@@ -27,6 +126,7 @@ describe('is.greaterThan', function(){
   it('not.greaterThan nothing', function(){
     asserts.not('greaterThan', greaterThanNothing, skippers)
   })
+
 })
 
 
