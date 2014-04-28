@@ -3,7 +3,7 @@
 
 var is = require('../is-too')
 var assert = require('assert')
-var subjects = require('./subjects.js')
+var subjects = require('./_subjects')
 var subjectKeys = Object.keys(subjects)
 
 module.exports = {
