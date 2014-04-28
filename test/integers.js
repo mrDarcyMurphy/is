@@ -44,8 +44,8 @@ describe('Integers', function(){
 
 describe('Interger Strings', function(){
 
-  it('is.aInteger', function(){
-    asserts.is('aInteger', [
+  it('is.integerString', function(){
+    asserts.is('integerString', [
       'exponent',
       'negativeIntegerString',
       'negativeOneString',
@@ -57,8 +57,8 @@ describe('Interger Strings', function(){
     ])
   })
 
-  it('is.not.aInteger', function(){
-    asserts.not('aInteger', [
+  it('is.not.integerString', function(){
+    asserts.not('integerString', [
       'exponent',
       'negativeIntegerString',
       'negativeOneString',
@@ -70,8 +70,8 @@ describe('Interger Strings', function(){
     ])
   })
 
-  it('aInt is an alias of aInteger', function(){
-    assert.equal(is.aInteger, is.aInt)
+  it('aInt is an alias of integerString', function(){
+    assert.equal(is.integerString, is.aInt)
   })
 
 })

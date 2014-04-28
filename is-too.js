@@ -285,10 +285,10 @@ var is = {
   /**
    * Is the subject an integer, or an integer in a string?
    *
-   * @method aInteger
+   * @method integerString
    * @param {Object} subject, required
    */
-  aInteger: function(x) {
+  integerString: function(x) {
     return is.str(x) && is.int(is.toNum(reghex(x)))
   },
 
@@ -415,7 +415,7 @@ is.str    = is.string
 is.emtStr = is.emptyString
 
 is.aNum   = is.aNumber
-is.aInt   = is.aInteger
+is.aInt   = is.integerString
 is.num    = is.number
 is.int    = is.integer
 is.hex    = is.hexadecimal
