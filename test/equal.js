@@ -1,50 +1,32 @@
+var is = require('../is-too')
 var assert = require('assert')
-var is = require('../lib/is')
-var fn = function(){}
-var exp = (666).toExponential()
-var hex = 0x1
+var asserts = require('./asserts')
+var subjects = require('./subjects')
 
-describe('equal', function(){
+var equals = ['nil', 'undef']
+var exactlies = ['undef']
 
-  it('equal', function(){
-    assert.equal(false, is.equal(fn))
-    assert.equal(false, is.equal(new Date()))
-    assert.equal(true , is.equal(undefined))
-    assert.equal(true , is.equal(null))
-    assert.equal(false, is.equal(NaN))
-    assert.equal(false, is.equal(true))
-    assert.equal(false, is.equal(false))
-    assert.equal(false, is.equal({}))
-    assert.equal(false, is.equal([]))
-    assert.equal(false, is.equal(""))
-    assert.equal(false, is.equal("  "))
-    assert.equal(false, is.equal("asdf"))
-    assert.equal(false, is.equal("1.23"))
-    assert.equal(false, is.equal("-42"))
-    assert.equal(false, is.equal("-42.01"))
-    assert.equal(false, is.equal("-1"))
-    assert.equal(false, is.equal("0"))
-    assert.equal(false, is.equal("666"))
-    assert.equal(false, is.equal(1.23))
-    assert.equal(false, is.equal(-42))
-    assert.equal(false, is.equal(-1))
-    assert.equal(false, is.equal(-0))
-    assert.equal(false, is.equal(0))
-    assert.equal(false, is.equal(+0))
-    assert.equal(false, is.equal(3.14))
-    assert.equal(false, is.equal(666))
-    assert.equal(false, is.equal(-exp))
-    assert.equal(false, is.equal(exp))
-    assert.equal(false, is.equal(+exp))
-    assert.equal(false, is.equal(-hex))
-    assert.equal(false, is.equal(hex))
-    assert.equal(false, is.equal(+hex))
-    assert.equal(false, is.equal(-Infinity))
-    assert.equal(false, is.equal(Infinity))
-    assert.equal(false, is.equal(+Infinity))
-    assert.equal(false, is.equal("-Infinity"))
-    assert.equal(false, is.equal("Infinity"))
-    assert.equal(false, is.equal("+Infinity"))
+describe('equality', function(){
+
+  it('is.equal', function(){
+    asserts.is('equal', equals)
+    assert(is.equal(subjects.negativeZero, subjects.zero))
+    assert(is.equal(subjects.negativeZero, subjects.positiveZero))
+  })
+
+  it('is.equal', function(){
+    asserts.not('equal', equals)
+    assert(is.not.equal(subjects.negativeExponent, subjects.positiveExponent))
+  })
+
+  it('is.exactly', function(){
+    asserts.is('exactly', exactlies)
+    assert(is.exactly(1, 1))
+    assert(is.exactly(subjects.negativeZero, subjects.positiveZero))
+  })
+
+  it('is.not.exactly', function(){
+    assert(is.not.exactly(subjects.negativeExponent, subjects.positiveExponent))
   })
 
 })

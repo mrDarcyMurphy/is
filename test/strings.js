@@ -1,5 +1,5 @@
 var assert = require('assert')
-var is = require('../lib/is')
+var is = require('../is-too')
 var fn = function(){}
 
 describe('strings', function(){

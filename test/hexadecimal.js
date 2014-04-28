@@ -1,69 +1,39 @@
+var is = require('../is-too')
 var assert = require('assert')
-var is = require('../lib/is')
-var fn = function(){}
+var asserts = require('./asserts.js')
 
 describe('hexadecimal', function(){
 
   it('hexadecimal', function(){
-    assert.equal(false, is.hexadecimal(fn))
-    assert.equal(false, is.hexadecimal(new Date()))
-    assert.equal(false, is.hexadecimal(undefined))
-    assert.equal(false, is.hexadecimal(NaN))
-    assert.equal(false, is.hexadecimal(null))
-    assert.equal(false, is.hexadecimal(true))
-    assert.equal(false, is.hexadecimal(false))
-    assert.equal(false, is.hexadecimal({}))
-    assert.equal(false, is.hexadecimal([]))
-    assert.equal(false, is.hexadecimal(""))
-    assert.equal(false, is.hexadecimal("  "))
-    assert.equal(false, is.hexadecimal("asdf"))
-    assert.equal(false, is.hexadecimal("1.23"))
-    assert.equal(false, is.hexadecimal("-42"))
-    assert.equal(false, is.hexadecimal("-42.01"))
-    assert.equal(false, is.hexadecimal("-1"))
-    assert.equal(false, is.hexadecimal("0"))
-    assert.equal(false, is.hexadecimal("666"))
-    assert.equal(true , is.hexadecimal(0))
-    assert.equal(true , is.hexadecimal(16))
-    assert.equal(true , is.hexadecimal(0xf))
-    assert.equal(false, is.hexadecimal('0xf'))
-    assert.equal(false, is.hexadecimal('0xg'))
-    assert.equal(false, is.hexadecimal(1.23))
-    assert.equal(true , is.hexadecimal(-42))
-    assert.equal(true , is.hexadecimal(-1))
-    assert.equal(true , is.hexadecimal(0))
-    assert.equal(true , is.hexadecimal(666))
+    asserts.is('hexadecimal', [
+      'hexadecimal',
+      'negativeHexadecimal',
+      'negativeInteger',
+      'negativeOne',
+      'negativeZero',
+      'negativeExponent',
+      'positiveInteger',
+      'positiveExponent',
+      'positiveHexadecimal',
+      'positiveZero',
+      'zero',
+    ], ['objectCreateNull'])
   })
 
   it('hexadecimalString', function(){
-    assert.equal(false, is.hexadecimalString(fn))
-    assert.equal(false, is.hexadecimalString(new Date()))
-    assert.equal(false, is.hexadecimalString(undefined))
-    assert.equal(false, is.hexadecimalString(NaN))
-    assert.equal(false, is.hexadecimalString(null))
-    assert.equal(false, is.hexadecimalString(true))
-    assert.equal(false, is.hexadecimalString(false))
-    assert.equal(false, is.hexadecimalString({}))
-    assert.equal(false, is.hexadecimalString([]))
-    assert.equal(false, is.hexadecimalString(""))
-    assert.equal(false, is.hexadecimalString("  "))
-    assert.equal(false, is.hexadecimalString("asdf"))
-    assert.equal(false, is.hexadecimalString("1.23"))
-    assert.equal(true , is.hexadecimalString("-42"))
-    assert.equal(false, is.hexadecimalString("-42.01"))
-    assert.equal(true , is.hexadecimalString("-1"))
-    assert.equal(true , is.hexadecimalString("0"))
-    assert.equal(true , is.hexadecimalString("666"))
-    assert.equal(false, is.hexadecimalString(0))
-    assert.equal(false, is.hexadecimalString(16))
-    assert.equal(false, is.hexadecimalString(0xf))
-    assert.equal(true , is.hexadecimalString('0xf'))
-    assert.equal(false, is.hexadecimalString('0xg'))
-    assert.equal(false, is.hexadecimalString(1.23))
-    assert.equal(false, is.hexadecimalString(-42))
-    assert.equal(false, is.hexadecimalString(-1))
-    assert.equal(false, is.hexadecimalString(0))
-    assert.equal(false, is.hexadecimalString(666))
+    asserts.is('hexadecimalString', [
+      'hexadecimalString',
+      'negativeHexadecimalString',
+      'negativeIntegerString',
+      'negativeOneString',
+      'negativeZeroString',
+      'negativeExponentString',
+      'positiveIntegerString',
+      'positiveExponentString',
+      'positiveHexadecimalString',
+      'positiveZeroString',
+      'zeroString',
+    ], ['objectCreateNull'])
   })
 
 
