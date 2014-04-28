@@ -1,7 +1,7 @@
 var is = require('../is-too')
 var assert = require('assert')
-var asserts = require('./asserts')
-var subjects = require('./subjects')
+var asserts = require('./_asserts')
+var subjects = require('./_subjects')
 
 var equals = ['nil', 'undef']
 var exactlies = ['undef']

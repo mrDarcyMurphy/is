@@ -1,4 +1,4 @@
-var asserts = require('./asserts.js')
+var asserts = require('./_asserts')
 var assert = require('assert')
 var is = require('../is-too')
 

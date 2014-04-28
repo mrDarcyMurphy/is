@@ -1,6 +1,6 @@
 var is = require('../is-too')
 var assert = require('assert')
-var asserts = require('./asserts.js')
+var asserts = require('./_asserts')
 var skippers = ['objectCreateNull']
 
 var greaterThanNothing = [
