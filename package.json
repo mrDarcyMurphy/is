@@ -8,13 +8,13 @@
     "type",
     "validation"
   ],
-  "homepage": "http://github.com/mrDarcyMurphy/is",
+  "homepage": "http://github.com/LoudBit/is",
   "author": "Darcy Murphy <mrDarcyMurphy@gmail.com> (http://github.com/mrDarcyMurphy)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrDarcyMurphy/is.git"
+    "url": "https://github.com/LoudBit/is-too.git"
   },
-  "main": "./lib/is.js",
+  "main": "./is-too.js",
   "devDependencies": {
     "mocha": "latest",
     "grunt": "0.4.x",
