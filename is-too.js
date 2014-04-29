@@ -32,7 +32,7 @@ function reghex(x) {
 
 var is = {
 
-  VERSION: '1.2.0',
+  VERSION: '2.0.0',
 
   // OPERATORS
 
@@ -398,6 +398,8 @@ var is = {
 
 
 // ALIASES
+
+is.required = is.present
 
 is.eq     = is.equal
 is.gt     = is.greaterThan
