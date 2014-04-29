@@ -407,6 +407,7 @@ is.gte    = is.greaterThanOrEqualTo
 is.lt     = is.lessThan
 is.lte    = is.lessThanOrEqualTo
 
+is.fn     = is.func
 is.bool   = is.boolean
 
 is.obj    = is.object
