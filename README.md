@@ -1,10 +1,8 @@
-# is-it
+# is-too
 
-A simple comparison module striving for code minimalism and a thorough test suite.
+A simple type checker slash validarion module striving for code minimalism and a thorough test suite.
 
-Pair `is` with [the-thing-is](https://github.com/mrDarcyMurphy/the-thing-is) for broader validation.
-
-[![browser support](http://ci.testling.com/mrDarcyMurphy/is.png)](http://ci.testling.com/mrDarcyMurphy/is)
+[![browser support](http://ci.testling.com/LoudBit/is-too.png)](http://ci.testling.com/LoudBit/is-too)
 
 ## Installation
 

@@ -1,5 +1,5 @@
 var assert = require('assert')
-var is = require('../lib/is')
+var is = require('../is-too')
 
 describe('is.not', function(){
 
