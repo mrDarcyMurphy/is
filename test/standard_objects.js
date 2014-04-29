@@ -45,8 +45,7 @@ describe('Standard Objects', function(){
     it('is.undef', function(){
       asserts.is('undef', ['undef'])
     })
-
-    it('undef', function(){
+    it('is.not.undef', function(){
       asserts.not('undef', ['undef'])
     })
   })
