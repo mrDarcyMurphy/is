@@ -2,7 +2,7 @@ var is = require('../is-too')
 var assert = require('assert')
 var asserts = require('./_asserts')
 
-describe('hexadecimal', function(){
+describe('Hexadecimal Values', function(){
 
   it('hexadecimal', function(){
     asserts.is('hexadecimal', [

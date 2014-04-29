@@ -27,7 +27,7 @@ function sortDates(x, y) {
 }
 
 function reghex(x) {
-  return x.replace(/^-?\+?(0x)?/i, '')
+  return x.replace && x.replace(/^-?\+?(0x)?/i, '') || x
 }
 
 var is = {
@@ -246,7 +246,7 @@ var is = {
    * @param {String} subject, required
    */
   emptyString: function(x) {
-    return is.string(x) ? x.replace(/\s/g, '') === '' : false
+    return is.str(x) ? x.replace(/\s/g, '') === '' : false
   },
 
 
@@ -265,11 +265,11 @@ var is = {
   /**
    * Is the subject a number, or a number in a string?
    *
-   * @method aNumber
+   * @method numberString
    * @param {Object} subject, required
    */
-  aNumber: function(x) {
-    return isNaN(parseFloat(x)) ? false : true
+  numberString: function(x) {
+    return is.str(x) && (is.hexstr(x) || !isNaN(parseFloat(reghex(x))))
   },
 
   /**
@@ -331,8 +331,8 @@ var is = {
    * @method aZero
    * @param {Object} subject, required
    */
-  aZero: function(x) {
-    return is.zero(is.toNum(x))
+  zeroString: function(x) {
+    return is.str(x) && is.zero(is.toNum(reghex(x)))
   },
 
 
@@ -414,8 +414,8 @@ is.rx     = is.regex
 is.str    = is.string
 is.emtStr = is.emptyString
 
-is.aNum   = is.aNumber
-is.aInt   = is.integerString
+is.numstr = is.numberString
+is.intstr = is.integerString
 is.num    = is.number
 is.int    = is.integer
 is.hex    = is.hexadecimal

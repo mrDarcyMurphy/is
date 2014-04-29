@@ -37,7 +37,7 @@ describe('Integers', function(){
   })
 
   it('is.int is an alias of is.integer', function(){
-    assert.equal(is.integer, is.int)
+    assert.equal(is.int, is.integer)
   })
 
 })
@@ -71,7 +71,7 @@ describe('Interger Strings', function(){
   })
 
   it('aInt is an alias of integerString', function(){
-    assert.equal(is.integerString, is.aInt)
+    assert.equal(is.intstr, is.integerString)
   })
 
 })
